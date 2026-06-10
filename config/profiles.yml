@@ -1,0 +1,29 @@
+# 论文筛选配置。修改关键词后提交到 GitHub，Actions 会重新生成 public/latest.json。
+profiles:
+  - name: my_research
+    enabled: true
+    # 想关注的关键词：标题命中 +3，摘要命中 +2。
+    include_keywords:
+      - multimodal RAG
+      - retrieval augmented generation
+      - agent memory
+      - Inference optimisation
+    # 不想看到的关键词：标题或摘要命中后直接丢弃。
+    exclude_keywords:
+      - protein structure
+      - remote sensing
+      - medical imaging
+    # 关注的 arXiv 分类。
+    arxiv_categories: [cs.AI, cs.CL, cs.CV, cs.IR, cs.LG]
+    # CCF 等级过滤。没有匹配到 CCF 的 arXiv 论文仍可按关键词分数入选。
+    ccf_levels: [A, B]
+    # 入选 latest.json 的最低分数。
+    score_threshold: 3
+fetch:
+  # 每次向前拉取的天数。
+  days_back: 2
+  # arXiv OAI-PMH set，cs 表示计算机相关集合。
+  arxiv_set: cs
+ccf:
+  # CCF 数据源。下载失败时会使用 rank/ccf.json 的本地缓存。
+  source_url: https://raw.githubusercontent.com/ccfddl/ccf-deadlines/master/conference/AI.yml

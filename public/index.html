@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Float Hub</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body { margin: 0; background: #f7f8fb; color: #172033; }
+    header { padding: 28px clamp(18px, 5vw, 56px) 16px; background: #ffffff; border-bottom: 1px solid #e6e9f0; }
+    h1 { margin: 0; font-size: 28px; letter-spacing: 0; }
+    main { max-width: 980px; margin: 0 auto; padding: 22px 18px 42px; }
+    .meta { color: #667085; margin-top: 8px; }
+    .group { margin: 22px 0; }
+    .group h2 { font-size: 18px; margin: 0 0 10px; }
+    .paper { background: #fff; border: 1px solid #e6e9f0; border-radius: 8px; padding: 14px; margin-bottom: 10px; }
+    .paper a { color: #0f5cc0; text-decoration: none; font-weight: 650; }
+    .paper p { margin: 8px 0 0; color: #475467; line-height: 1.55; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .tag { background: #eef4ff; color: #174a91; border-radius: 999px; padding: 3px 8px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <header><h1>Paper Float Hub</h1><div class="meta" id="summary">Loading latest.json...</div></header>
+  <main id="content"></main>
+  <script>
+    const groups = ["CCF-A", "CCF-B", "CCF-C", "arXiv", "unmatched"];
+    const esc = (text) => String(text || '').replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    function render(payload) {
+      const map = Object.fromEntries((payload.papers || []).map((p) => [p.id, p]));
+      document.querySelector('#summary').textContent = `${payload.date || '-'} / ${payload.total || 0} papers`;
+      document.querySelector('#content').innerHTML = groups.map((name) => {
+        const papers = (payload.groups?.[name] || []).map((id) => map[id]).filter(Boolean);
+        const list = papers.map((p) => `<article class="paper"><a href="${esc(p.url)}" target="_blank" rel="noreferrer">${esc(p.title)}</a><p>${esc((p.abstract || '').slice(0, 420))}${(p.abstract || '').length > 420 ? '...' : ''}</p><div class="tags"><span class="tag">score ${p.score || 0}</span>${(p.matched_keywords || []).map((kw) => `<span class="tag">${esc(kw)}</span>`).join('')}</div></article>`).join('') || '<p class="meta">No papers.</p>';
+        return `<section class="group"><h2>${name} (${papers.length})</h2>${list}</section>`;
+      }).join('');
+    }
+    fetch('./latest.json').then((r) => r.json()).then(render).catch((err) => { document.querySelector('#summary').textContent = `Failed to load latest.json: ${err.message}`; });
+  </script>
+</body>
+</html>

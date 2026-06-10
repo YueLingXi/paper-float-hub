@@ -1,0 +1,9 @@
+{
+  "version": "seed",
+  "generated_at": "2026-06-10T00:00:00Z",
+  "items": [
+    {"abbr":"ACL","full_name":"Annual Meeting of the Association for Computational Linguistics","type":"conference","field":"Artificial Intelligence","level":"A","aliases":["ACL","Annual Meeting of the ACL"]},
+    {"abbr":"NeurIPS","full_name":"Conference on Neural Information Processing Systems","type":"conference","field":"Artificial Intelligence","level":"A","aliases":["NIPS","Neural Information Processing Systems"]},
+    {"abbr":"EMNLP","full_name":"Conference on Empirical Methods in Natural Language Processing","type":"conference","field":"Artificial Intelligence","level":"B","aliases":["Empirical Methods in Natural Language Processing"]}
+  ]
+}
