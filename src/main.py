@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 from pathlib import Path
@@ -33,7 +33,11 @@ def run() -> None:
     print("[1/5] Updating CCF cache")
     ccf_data = update_ccf_file(root / "rank" / "ccf.json", ccf_cfg.get("source_url"))
     print("[2/5] Fetching arXiv papers")
-    papers = fetch_recent_arxiv(days_back=int(fetch_cfg.get("days_back", 2)), arxiv_set=str(fetch_cfg.get("arxiv_set", "cs")))
+    papers = fetch_recent_arxiv(
+        days_back=int(fetch_cfg.get("days_back", 2)),
+        arxiv_set=str(fetch_cfg.get("arxiv_set", "cs")),
+        categories=profile.get("arxiv_categories") or None,
+    )
     print(f"Fetched {len(papers)} papers")
     print("[3/5] Matching CCF metadata")
     papers = attach_ccf_level(papers, ccf_data.get("items") or [])
