@@ -1,13 +1,148 @@
 {
-  "generated_at": "2026-09-01T00:07:43.149208Z",
+  "generated_at": "2026-09-01T22:51:09.057513Z",
   "date": "2026-09-01",
-  "total": 0,
+  "total": 4,
   "groups": {
-    "CCF-A": [],
+    "CCF-A": [
+      "arxiv:2608.30866",
+      "arxiv:2608.30107"
+    ],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2608.30163",
+      "arxiv:2608.29528"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2608.30866",
+      "title": "Beyond Good Intentions: When Does the Framing of Multilingual and Low-Resource NLP Research Become a Caricature?",
+      "abstract": "Building language technologies and conducting NLP research for low-resource languages---particularly when led by native speakers or involving participatory research practices---are often framed as means of addressing inequality, serving local communities, and, at times, contributing to *decolonisation*. In this paper, we examine recently published NLP and ML papers, focusing on the narratives used to characterise multilinguality, low-resource languages, and underrepresented cultures. We propose a framework for analysing research framings and identify recurring rhetorical patterns that may hinder accountability and constrain equitable knowledge production for---and by---underserved communities. We further assess the evidential basis of assertions regarding community benefit and find that such statements are often weakly supported or left unsubstantiated. Although community ownership and participation are frequently presented as key objectives, our analysis, supported by statistics from the ACL Anthology, suggests that research outputs more often prioritise resource creation and benchmarking---important but distinct goals---over evidence of broader structural change. We conclude by offering practical recommendations to help authors, reviewers, and readers critically assess these assertions and avoid potentially misleading framings.",
+      "authors": [
+        "Nedjma Ousidhoum",
+        "Noopur Zambare",
+        "Mohamed Abdalla"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-08-31",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2608.30866",
+      "pdf_url": "https://arxiv.org/pdf/2608.30866.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2608.30107",
+      "title": "AtlasNLP: A Country-Aware Atlas of Dataset Representation in NLP",
+      "abstract": "Understanding which countries are represented in NLP datasets is essential for identifying gaps, targeting data collection, measuring progress, and informing AI policy. However, geographic metadata is very rarely available, and country-level representation is often hidden behind broad language-level claims. We introduce AtlasNLP, a country-aware atlas of over 13,000 NLP dataset records across normalized NLP task categories, tracking both the populations represented and where datasets are produced. AtlasNLP includes AtlasNLP-Gold, a human-curated reference set, and AtlasNLP-Core, an ACL-derived large-scale collection. Using this resource, we show that (1) dataset coverage is highly uneven across countries and tasks; (2) dataset production and representation are geographically asymmetric; and (3) language coverage does not imply geographic representation. These findings reveal blind spots in current dataset documentation practices and motivate more explicit geographic metadata for country-aware NLP evaluation.",
+      "authors": [
+        "Joan Nwatu",
+        "Tsedeniya Solomon Amare",
+        "Longju Bai",
+        "Bontu Fufa Balcha",
+        "Zayd Bashir",
+        "Angana Borah",
+        "Zara Burzo",
+        "Yubin Choi",
+        "Naihao Deng",
+        "Samika Gupta",
+        "Michel Faloughi",
+        "Claude Kwizera",
+        "Ziqiao Ma",
+        "Cynthia Yacel Fuertes Panizo",
+        "Ellie Seehorn",
+        "Hui Shen",
+        "Jiayi Tang",
+        "Zesen Zhao",
+        "Boyuan Zheng",
+        "Rada Mihalcea"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-08-31",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2608.30107",
+      "pdf_url": "https://arxiv.org/pdf/2608.30107.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2608.30163",
+      "title": "Doc-REFRAG: Rethinking Multimodal Document Retrieval-Augmented Generation",
+      "abstract": "Real-world knowledge resides in multimodal documents, necessitating retrieval-augmented generation (RAG) for accurate question answering. However, existing multimodal RAG models are primarily designed for single-image or closed-document settings and exhibit limited accuracy in realistic multi-image scenarios. Moreover, processing numerous retrieved images incurs substantial computational overhead from irrelevant visual tokens. To address these challenges, we introduce DocLongRAG, a large-scale dataset of 343K question--answer pairs, each associated with an average of 37.4 retrieved images to reflect authentic RAG workflows. Building on this dataset, we propose Doc-REFRAG, a question-guided framework that compresses visual tokens into coarse chunks and selectively expands question-relevant ones via a lightweight RL-based selector. Experiments on six benchmarks show that Doc-REFRAG outperforms eleven strong baselines, achieving state-of-the-art accuracy with significantly lower inference latency. Our resources are available at https://github.com/Collab-Gen/Doc-REFRAG.",
+      "authors": [
+        "Ruofan Hu",
+        "Shengyang Xu",
+        "Minjie Hong",
+        "Xiaoda Yang",
+        "Sashuai Zhou",
+        "Ke Lei",
+        "Tao Jin",
+        "Zhou Zhao"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-08-31",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.CV"
+      ],
+      "matched_keywords": [
+        "multimodal rag"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2608.30163",
+      "pdf_url": "https://arxiv.org/pdf/2608.30163.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2608.29528",
+      "title": "MedCache: Efficient and Temporally Valid Memory for Longitudinal Clinical Agents",
+      "abstract": "Longitudinal clinical agents must maintain an evolving patient state from evidence distributed across visits, time points, and specialties. However, how agent memory should be designed for this setting remains unclear. We introduce a benchmark of multi-visit, multi-specialty patient records that evaluates long-context evidence retrieval, cross-time evidence aggregation, and cross-specialty clinical reasoning. Using this benchmark, we systematically study four memory design choices: curation, organization, retrieval, and memory-augmented reasoning. We find that temporal validity is more important than simply retaining more history; specialty-factorized memory reduces context but can hide shared evidence; and multiple agents help when specialists must reason together, not merely when evidence comes from multiple memories. Guided by these findings, we propose \\textit{MedCache}, a hybrid framework that constructs temporally valid patient memory, organizes evidence into overlapping specialty views, routes each query to relevant memories, and adaptively invokes one or multiple specialists. Experiments show that MedCache improves reasoning accuracy and memory efficiency over strong single-agent and multi-agent baselines, while generalizing across model backbones and external datasets.",
+      "authors": [
+        "Hei Ting",
+        "Chan",
+        "Chenwei Wu",
+        "Xueshen Liu",
+        "Boyuan Zheng",
+        "Liyue Shen",
+        "Jiasi Chen",
+        "Z. Morley Mao"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-08-30",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.DC",
+        "cs.MA"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2608.29528",
+      "pdf_url": "https://arxiv.org/pdf/2608.29528.pdf",
+      "ccf_match": null
+    }
+  ]
 }
