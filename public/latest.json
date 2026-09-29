@@ -1,13 +1,282 @@
 {
-  "generated_at": "2026-09-29T00:37:27.022578Z",
+  "generated_at": "2026-09-29T23:58:31.456576Z",
   "date": "2026-09-29",
-  "total": 0,
+  "total": 9,
   "groups": {
-    "CCF-A": [],
+    "CCF-A": [
+      "arxiv:2609.34534"
+    ],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2609.34422",
+      "arxiv:2609.34385",
+      "arxiv:2609.34227",
+      "arxiv:2609.34160",
+      "arxiv:2609.35233",
+      "arxiv:2609.34242",
+      "arxiv:2609.34132",
+      "arxiv:2609.33183"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2609.34422",
+      "title": "Coding Agent Memory Post-training: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via Reinforcement Learning",
+      "abstract": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. Recent work has begun to use reinforcement learning to make memory control part of the policy, often relying on predefined memory tools within domain-specific training environments of relatively short horizons. This setup ties learned memory behavior to environment-specific interfaces that lie outside the base model's pre-training and must be learned from scratch, so even after post-training, agents struggle to use memory in long-horizon tasks. To address these limitations, we introduce Coding Agent Memory Gym (CAMG), a suite of long-horizon agentic-RL environments spanning Shop, Coding, DeepResearch, and AutoResearch. Alongside each environment's native task interface, CAMG provides executable shell access and an episode-persistent workspace, enabling agents to create, revise, search, and reuse files as memory throughout an episode. We also introduce CAMG-RL, which trains a single policy jointly across all four environments with fully asynchronous PPO, learning this file-based memory behavior directly from downstream task reward, and we train CAMG-RL-4B and CAMG-RL-9B from Qwen3.5 models of matching size. On SWE-bench Verified and MLE-bench Lite, CAMG-RL-4B and CAMG-RL-9B are competitive with Qwen3.5-35B-A3B and Qwen3.5-122B-A10B, respectively.",
+      "authors": [
+        "Lirui Luo",
+        "Kelong Mao",
+        "Heming Xia",
+        "Rongqing Li",
+        "Xinwei Yang",
+        "Luyu Chen",
+        "Kieran Wong",
+        "Yudong Guo",
+        "Xinrui Wang",
+        "Jiayin Zhu",
+        "Simiu Gu",
+        "Sulong Xu",
+        "Cong Fang"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.LG",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2609.34422",
+      "pdf_url": "https://arxiv.org/pdf/2609.34422.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.34385",
+      "title": "Just-In-Time Agent Memory with Runtime Agentic Research",
+      "abstract": "Memory is critical for AI agents. Many existing agent-memory systems follow an Ahead-of-Time (AOT) design, constructing memory before a specific request arrives. While this reduces online serving cost, such request-agnostic memory construction can discard fine-grained information that later becomes important. To address this limitation, we propose Just-In-Time Agent Memory (JAM), a trainable framework for query-conditioned context construction at runtime. A Memorizer preserves complete raw histories in a hierarchical page-store with compact navigational summaries, while a Researcher iteratively retrieves, inspects, and integrates evidence for each request. To train these memory-use behaviors, we introduce Memory-Gym, an evidence-grounded data synthesis pipeline covering nine task types across six domains, and optimize the Researcher through verified-trajectory supervised fine-tuning followed by Hint-guided Group Relative Policy Optimization. We demonstrate the effectiveness of JAM across a variety of benchmarks on agent memory and long-context processing, where it achieves stronger task performance than AOT-style memory systems while remaining substantially more efficient than prior trained agentic memory approaches. To support reproducibility and future research, we release our anonymized source code at https://github.com/VectorSpaceLab/general-agentic-memory.",
+      "authors": [
+        "Bingyu Yan",
+        "Chaofan Li",
+        "Hongjin Qian",
+        "Shuqi Lu",
+        "Chaozhuo Li",
+        "Zheng Liu"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2609.34385",
+      "pdf_url": "https://arxiv.org/pdf/2609.34385.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.34534",
+      "title": "Papers Without Code: Availability of GitHub Repositories Linked in *CL Publications",
+      "abstract": "Source code and data published at computational linguistics (*CL) venues are increasingly being shared via GitHub. While this generally is a favourable development for the accessibility and potential reusability of research artifacts in natural language processing (NLP), the long-term availability of such repositories has not been evaluated. In this squib, we discuss the availability of repositories linked in papers published in the Computational Linguistics (CL) journal as well as at ACL and its co-located events over the past ten years. Contrary to our expectations, we find that GitHub repositories linked in more recent ACL publications are unavailable at similar rates as in older publications, in parts due to an increase in empty and placeholder repositories. Similar trends hold for other *CL venues, but not for platforms other than GitHub.",
+      "authors": [
+        "Selina Meyer",
+        "Michael Roth"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2609.34534",
+      "pdf_url": "https://arxiv.org/pdf/2609.34534.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2609.34227",
+      "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
+      "abstract": "Does conversational memory need LLM-extracted facts, or is selecting the right raw turns enough? Published results disagree. Extraction-based systems report gains from distilled facts. Recent studies find raw history with good ranking does as well, but disagree about whether ranking matters. We ran a pre-registered study on held-out LoCoMo conversations and LongMemEval. At a tight budget on LoCoMo, raw turns selected by a single call to Jev, a typed decision model, are non-inferior to an LLM-extraction memory (one-sided 95% bound -3.0 points against a -5-point margin). Blind human grading narrows the margin but does not change the result. Raw turns cost 3,061 times less to write, and the result holds with a second answer model. Within this study, reranking's gain shrinks as the budget grows. It adds 17.4 points on LoCoMo and 9.1 on LongMemEval when three of 30 candidates are kept. At generous budgets it adds 1.5 and 1.1, and extraction systems are more accurate. This suggests why published results disagree. At matched context, Jev selects as accurately as an LLM reranker (non-inferiority bound -2.0) at a third of the latency, and more accurately than a multi-call graph traversal. Reranking lowers correct abstention. Plans, code and graded answers are released.",
+      "authors": [
+        "Rishabh Sharma",
+        "Rishika Lall"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2609.34227",
+      "pdf_url": "https://arxiv.org/pdf/2609.34227.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.34160",
+      "title": "RoutePrism: Tracing Construction Order Effects in Agent Memory",
+      "abstract": "Processing the same records in a different order can discard different evidence, yet endpoint accuracy alone cannot reveal what changed or whether it mattered. We introduce RoutePrism, a diagnostic protocol that builds memory twice from the same source pool in two processing orders, then traces which sources, compiled contexts, and answers differ. Because record content, timestamps, policy, and the answer model all stay fixed, any observed difference is localized to the memory construction step. A matched four-condition intervention tests whether a record displaced by reordering actually carried task-relevant evidence: restoring that single record recovers over 60 percentage points of lost accuracy, while substituting a non-supporting record of equal length does not. We evaluate the protocol on PersonaMem-32K (63 primary queries, 29 users) and 470 LongMemEval-S questions with histories spanning 38 to 62 sessions, replicating the core intervention across five answer models. Survivor selection, defined as the choice of which record a cluster retains, drives most source-level changes, while different memory policies (compaction, bounded recency, MemoChat-style summarization, A-MEM) produce distinct failure signatures at the source, context, and metadata layers.",
+      "authors": [
+        "Dong Xu",
+        "Zhangfan Yang",
+        "Jiantao Wu",
+        "Shipeng Zhang",
+        "Zexuan Zhu",
+        "Jiangqiang Li",
+        "Jun Zhang",
+        "Junkai Ji"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2609.34160",
+      "pdf_url": "https://arxiv.org/pdf/2609.34160.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.35233",
+      "title": "EP-Mem: Elastic Privacy Memory for Social Relationship-Aware LLM Agents",
+      "abstract": "Large language model (LLM) agents face critical privacy risks when acting as delegates in human-agent-human communication. To prevent such breaches, agents must understand users' social relationships and adhere to context-dependent social information disclosure boundaries. Current studies on agent memory privacy focus on instantaneous interactions, leaving the long-term relational disclosure problem unexplored. In this paper, we propose EP-Mem, an Elastic Privacy Memory architecture that reframes privacy as user-owned boundary control across social roles. EP-Mem introduces (1) token-level memory driven by user-configurable a privacy policy that stratifies persons and events, combining domain-level default circulation rules with fact-level whitelist/blacklist exceptions; and (2) a pluggable sidecar with a privacy engine that aligns disclosure controls with memory across summary, detail, and boundary granularities, enforced throughout generation, storage, and retrieval. We construct EP-Bench, to our knowledge the first long-term multi-party benchmark with cross-session correlated events for policy-conditioned relational disclosure. Experiments show that EP-Mem achieves 94.0% privacy classification accuracy, improves disclosure-permission judgment from 22% to 68%, and reduces privacy leakage by 75.6%, while maintaining retrieval performance and cross-benchmark generalization.",
+      "authors": [
+        "Fengzhou Sun",
+        "Yuan Zhang",
+        "Xintong Yu",
+        "Jinyao Yan"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2609.35233",
+      "pdf_url": "https://arxiv.org/pdf/2609.35233.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.34242",
+      "title": "Stashbird: Efficient Speaker-Indexed Memory for Conversational Agents",
+      "abstract": "AI agents require memory that preserves information across user-agent exchanges, user-to-user conversations, and group conversations with or without agent participation, while supporting updates as evidence changes or is removed. We present Stashbird, an agent memory system that links source episodes to derived memory state through explicit provenance. Stashbird organizes memory into episodic records, semantic relations, community summaries, and persisted graph state, with lifecycle operations for incremental updates and episode-level deletion. We evaluate question-answering accuracy and model-facing workload across four long-term memory benchmarks. On LoCoMo, Stashbird uses 76.4x fewer ingestion prompt tokens than Graphiti. Compared with reproduced Hindsight on the same benchmark, it uses 8.1x fewer retrieval prompt tokens, with accuracy 1.6 percentage points lower. It achieves higher accuracy than Hindsight on LongMemEval-S and GroupMemBench and comparable accuracy on EverMemBench.",
+      "authors": [
+        "Chidera Biringa",
+        "Lucas Yannul",
+        "Xiaowen Wang",
+        "Marco Ayala",
+        "Nicholas Yi",
+        "Alex Moyse",
+        "Nishant Manchanda",
+        "Vivek Gupta"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2609.34242",
+      "pdf_url": "https://arxiv.org/pdf/2609.34242.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.34132",
+      "title": "From Attack Success to Attack Severity: Counterfactual Memory Attacks on LLM Agents",
+      "abstract": "As LLM agents increasingly rely on persistent memory for long-horizon and personalized behavior, they can retain and reuse information across interactions, but this also creates a lasting channel through which malicious memory writes can influence future behavior. Persistent-memory attacks are typically evaluated by whether they succeed, yet successful attacks can leave persistent states with substantially different downstream consequences. We study this severity as a distinct attack-design objective and formalize it with counterfactual memory regret (CMR), the paired increase in expected downstream loss relative to clean memory. We introduce MemHarm, which predeclares a finite class of sparse, grounded semantic edits, evaluates candidates through the normal agent memory interface using offline paired-loss feedback, and certifies resolved selections within that class. Compared with attack-success optimization, CMR-guided selection produces substantially larger downstream loss while retaining most of the success-rate gain. Across two agent benchmarks and diverse memory designs, MemHarm attains the highest CMR point estimates among the evaluated general attacks on identical support. Factor-removal interventions link this harm to the selected semantic factor, and native-agent deployments verify the write-to-fresh-process attack path.",
+      "authors": [
+        "Mingxi Zou",
+        "Langzhang Liang",
+        "Zhuo Wang",
+        "Yiyang Zhao",
+        "Lizhen Qu",
+        "Zenglin Xu"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-28",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2609.34132",
+      "pdf_url": "https://arxiv.org/pdf/2609.34132.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2609.33183",
+      "title": "Identifying Temporal Features within Transcoders for Time Sensitive Factual Recall",
+      "abstract": "Large Language Models (LLMs) suffer from temporal misalignment, often due to the contradictory nature of their training corpora. While current mitigation strategies rely on computationally expensive fine-tuning or context-heavy retrieval augmented generation (RAG), the internal mechanisms governing time-sensitive recall remain under-explored. Unlike prior studies that identify temporal components such as attention heads and MLP layers, we provide the first feature-level map of temporal recall by isolating individual MLP features via transcoder circuit tracing. We identify three node categories (common temporal, common to the year, and chrono-semantic) which interact to generate a temporal filter during factual recall. By analysing Gemma 2 2B, LLaMA 3.2 1B, and Qwen3-4B, we show that these features do not follow a simple linear pipeline but represent time through a parallel and mixed syntactic-semantic interplay across layers. We additionally discover a class of higher-layer temporal components invisible to existing EAP-IG methods, establishing transcoders as a more complete lens for temporal interpretability in time-sensitive factual recall. These findings present MLP components for potential targeted interventions in time-sensitive factual recall",
+      "authors": [
+        "Sanjay Govindan",
+        "Yang Song",
+        "Maurice Pagnucco"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-09-27",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2609.33183",
+      "pdf_url": "https://arxiv.org/pdf/2609.33183.pdf",
+      "ccf_match": null
+    }
+  ]
 }
