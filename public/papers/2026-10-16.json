@@ -1,0 +1,390 @@
+{
+  "generated_at": "2026-10-16T23:03:36.532218Z",
+  "date": "2026-10-16",
+  "total": 10,
+  "groups": {
+    "CCF-A": [],
+    "CCF-B": [],
+    "CCF-C": [],
+    "arXiv": [
+      "arxiv:2610.22209",
+      "arxiv:2610.21170",
+      "arxiv:2610.19472",
+      "arxiv:2610.19366",
+      "arxiv:2610.22297",
+      "arxiv:2610.20419",
+      "arxiv:2610.19836",
+      "arxiv:2610.19474",
+      "arxiv:2610.21165",
+      "arxiv:2610.21091"
+    ],
+    "unmatched": []
+  },
+  "papers": [
+    {
+      "id": "arxiv:2610.22209",
+      "title": "Beyond Downstream QA: Rethinking How We Evaluate Agent Memory",
+      "abstract": "Agent memory benchmarks evaluate whether an agent's responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy for memory quality. We show this evaluation paradigm is incomplete: it conflates memory correctness with retrieval and generation quality, producing both false positives where correct responses mask broken memory and false negatives where incorrect responses blame correct memory for retrieval failures. We introduce FEB-30, a benchmark of 30 fact-evolution trajectories spanning 6 diagnostic categories and 3 difficulty levels, constructed via paradigm inversion: documents are generated from known fact trajectories, yielding deterministic ground truth without human annotation. Each trajectory defines how a fact should evolve across multi-author artifacts (documents, emails, conversations), enabling direct inspection of the memory store after each ingestion step. Applying FEB-30 to a representative memory system, we demonstrate that intrinsic and extrinsic evaluation diverge by an average of 16 percentage points, with 44% of trajectories exceeding meaningful divergence thresholds. Diagnostic decomposition reveals that the system correctly classifies memory operations (create, update, reinforce, supersede) only 20% of the time, a failure entirely invisible to extrinsic evaluation, and that failure modes differ systematically by category and difficulty. We release the benchmark, document generation pipeline, and scoring framework to support reproducible evaluation of agent memory systems.",
+      "authors": [
+        "Sebastian-Antonio Toma",
+        "Jean de Kernier",
+        "Mike Ply",
+        "Oliviu Matei"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.22209",
+      "pdf_url": "https://arxiv.org/pdf/2610.22209.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.21170",
+      "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
+      "abstract": "Agent memory architectures define how LLM agents store and reuse experience across tasks, but they are typically fixed after deployment, limiting their adaptability across task types. Recent self-evolving approaches instead adapt these memory architectures using execution feedback, typically represented as evaluation scores or compressed summaries. However, such coarse-grained feedback is insufficient for precise failure localization in current agent systems, where long-horizon task execution involves multiple interacting components. Without a precise failure location, existing approaches lack a clear code-level target for modification, leaving the update scope weakly constrained and often leading to large-scale rewrites of an otherwise capable memory architecture. We propose MemScope, a framework for evidence-grounded, localized evolution of an existing memory architecture. Its tool-using Patch Agent jointly inspects raw execution traces, runtime memory state, and current architecture code to identify repair targets and apply bounded, in-place edits under provider-identity and memory-compatibility constraints. On GAIA, the trace-and-memory inspection variant achieves 86.67% accuracy, compared with 70.00% for trace-only and 63.33% for summary-only feedback. Under xBench tasks, the evolved memory architecture improves over its original version from 49 to 55 correct answers with DeepSeek V3.2 and from 50 to 53 with Kimi K2.7 Code. On disjoint ALFWorld unseen tasks, success rises from 50.75% to 71.64%. Across archived architecture-snapshot transitions, the median code-change ratio is 4.4%. These results support fine-grained execution evidence as a basis for localized, in-place memory-architecture evolution.",
+      "authors": [
+        "Miao Su",
+        "Yucan Guo",
+        "Zixuan Li",
+        "Long Bai",
+        "Zhongni Hou",
+        "Xiaolong Jin",
+        "Jiafeng Guo"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.21170",
+      "pdf_url": "https://arxiv.org/pdf/2610.21170.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.19472",
+      "title": "MemCode: Discrete Semantic Representations for Long-Term Agent Memory",
+      "abstract": "Long-term memory remains a fundamental bottleneck for large language model (LLM) agents across sessions. Existing systems typically adopt a write-then-retrieve paradigm, storing context-dependent dialogue fragments and retrieving them via nearest-neighbor search in a continuous embedding space. This design yields unstable access units and systematically misses logically related but lexically distant evidence. We propose MemCode, a long-term agent memory framework that couples retrieval-oriented writing with discrete associative retrieval. MemCode rewrites dialogue into self-contained atomic memory units (AMUs), maps AMUs into a learnable codebook with isomorphic semantic quantization (ISQ), and uses codebook co-occurrence topology as a retrieval path complementary to vector search. For long-term memory stores, MemCode separates online atomic writes from asynchronous offline consolidation. On LongMemEval-S and LoCoMo with GPT-4o-mini and Qwen3-30B-A3B-Instruct-2507 backbones, MemCode achieves the best overall accuracy while keeping per-dialogue memory construction within roughly 40~130 seconds, making it 3~21 times faster than LightMem and over an order of magnitude faster than A-MEM and MemoryOS.",
+      "authors": [
+        "Xin Li",
+        "Liang Hu",
+        "Duoqian Miao",
+        "Ming Peng",
+        "Qi Zhang"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-14",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.19472",
+      "pdf_url": "https://arxiv.org/pdf/2610.19472.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.19366",
+      "title": "Seeing, Maintaining, and Learning: The Evolution of Multimodal Agent Memory",
+      "abstract": "Multimodal models and agents have emerged to enable AI systems to learn from and interact with the real world more like humans by integrating information across multiple modalities. However, enabling multimodal agents to continually acquire useful information from complex, heterogeneous multimodal data remains a significant challenge as they move toward long-horizon tasks and lifelong settings. Addressing this challenge requires effective memory mechanisms that can maintain continuity across sessions, adapt to changing users and environments, and refine memory-management policies through accumulated experience. We introduce a two-axis analytical framework for multimodal agent memory structured around two key questions: how multimodal information is formed and represented (Axis I, Formation and Representation), and how its management adapts with accumulated experience (Axis II, Memory Management). Axis I, Formation and Representation, characterizes what information is retained and how it is encoded (e.g., modality-specific embeddings, textual and structured records, latent and parametric representations) to support subsequent reasoning and action. Axis II, Memory Management, distinguishes three tiers: T1 Static Memory reuses fixed memory; T2 Dynamic Memory updates memory through a stable policy; and T3 Self-Evolving Memory updates memory through an evolving policy. Based on this framework, we synthesize recurring design patterns and derive principles for balancing source fidelity with abstraction, maintaining temporal validity and provenance, grounding memory use in recoverable evidence, and evolving memory policies over time. Furthermore, we discuss the challenges and potential future directions for the memory mechanism of multimodal agents.",
+      "authors": [
+        "Minghao Guo",
+        "Qingyue Jiao",
+        "Xiujin Liu",
+        "Jianhong Pang",
+        "Ruimeng Yang",
+        "Naihao Xu",
+        "Liwei Che",
+        "Haochen Xue",
+        "Ziqi Wang",
+        "Xinying Cai",
+        "Jiaxuan Luo",
+        "Jiaxin Deng",
+        "Xuesong Ye",
+        "Jintao Qu",
+        "Wenyao Gao",
+        "Jingwen Gu",
+        "Chenyang Zhao",
+        "Shichun Liu",
+        "Guibin Zhang",
+        "Zefang Liu",
+        "Siyin Wang",
+        "Wujiang Xu",
+        "Danrui Li",
+        "Zeru Shi",
+        "Woongyeong Yeo",
+        "Shuang Liu",
+        "Wei-Chieh Huang",
+        "Weizhi Zhang",
+        "Tianyu Yang",
+        "Kangsan Kim",
+        "Yebowen Hu",
+        "Bowen Wen",
+        "Bowen Jiang",
+        "Haohao Su",
+        "Ming Yin",
+        "Sheldon Yu",
+        "Mian Zhang",
+        "Yuyan Chen",
+        "Hanrong Zhang",
+        "Kai Mei",
+        "Zihao Zhang",
+        "Mingyu Jin",
+        "Xi Zhu",
+        "Hengyi Wang",
+        "Tianxin Wei",
+        "Linyong Nan",
+        "Zhenwen Liang",
+        "Zhendong Chu",
+        "Ziqi Huang",
+        "Yongye Su",
+        "Sixun Dong",
+        "Shujian Liu",
+        "Kaiqu Liang",
+        "Jiaojiao Han",
+        "Zhaoye Fei",
+        "Kun Wang",
+        "Shihan Dou",
+        "Zhichun Guo",
+        "Xingjian Diao",
+        "Zeqi Gu",
+        "Heng Wang",
+        "Tao Feng",
+        "Cheng Qian",
+        "Hamid Palangi",
+        "Silei Xu",
+        "Xi Yun",
+        "Yi Zhu",
+        "Shilong Liu",
+        "Qingsong Wen",
+        "Sung Ju Hwang",
+        "Zuxuan Wu",
+        "Yu-Gang Jiang",
+        "Yiyu Shi",
+        "Dimitris N. Metaxas",
+        "Jiaxuan You",
+        "Julian McAuley",
+        "Mengdi Wang",
+        "Jiawei Han",
+        "Philip S. Yu",
+        "Ziyi Ye"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-14",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.RO"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.19366",
+      "pdf_url": "https://arxiv.org/pdf/2610.19366.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.22297",
+      "title": "Private Retrieval Augmented Generation via Random Projection",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances the capabilities of large language models (LLMs) by querying external structured knowledge. However, it can also introduce privacy risks by leaking sensitive information from the retrieval datastore. We propose a simple method to preserve datastore privacy in RAG systems via random projection. By applying the same projection to both datastore embeddings and query embeddings, our method provably preserves semantic similarity between queries and retrieved items while substantially mitigating data extraction attacks. Across multiple RAG architectures and datasets, we show that this lightweight approach achieves superior retrieval and generation performance compared to prior methods which leverage formal differential privacy (DP) guarantees, while exhibiting comparable empirical privacy under strong attack models. Our results for the first time suggest that random projection can serve as a competitive and practical baseline for privacy-preserving RAG systems.",
+      "authors": [
+        "Dixi Yao",
+        "Tahseen Rabbani",
+        "Tian Li"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.22297",
+      "pdf_url": "https://arxiv.org/pdf/2610.22297.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.20419",
+      "title": "Analyzing performance of Retrieval Augmented Generation models for Question Answering Tasks",
+      "abstract": "Retrieval-Augmented Generation (RAG) models have become almost a cornerstone of open-domain question answering tasks; in which the quality of answers generated in the process, greatly relies on the effectiveness of retrieval mechanisms. In the realm of LLM, the last two years have seen tremendous progress in RAG architectures, with many models reporting to have improved performance through various design innovations. The cultural question and answering systems of South Asia, in particular, present a specific challenge since the region is home to the vast number of languages and traditions, which are closely interrelated. Along with these deeply intertwined historical narratives increase the need for culturally grounded and context-aware interpretation. Despite major architectural advances in LLMs, claiming significant improvements, challenges remain when answering these region specific questions in native languages. In this study, we aim to extract high-performing factors to guide the development of optimized hybrid RAG systems. We further explore whether the integration of RAG changes performance differently for culturally grounded and non-cultural questions in a South Asian multilingual setup, and whether RAG produces a higher overall percentage of correct answers than contexted answering. We also examine how LLM performance changes when RAG methods are integrated into the question-answering pipeline in comparison with non-contexted and contexted answering and, evaluate whether the introduction of RAG benefits popular or non-popular culturally grounded questions more. Not only does our work evaluate the current methods but also carves a path for future designs of more accurate and efficient question-answering pipelines.",
+      "authors": [
+        "Fazle Mohammed Tasfiq",
+        "Sabab Attin",
+        "Sheikh Md. Tahmid Hossain",
+        "Raiat Reza",
+        "Tanzim Ahmmed",
+        "Nafis Chowdhury",
+        "Anika Ahmed",
+        "Moinul Haque",
+        "Farig Yousuf Sadeque"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-14",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.20419",
+      "pdf_url": "https://arxiv.org/pdf/2610.20419.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.19836",
+      "title": "EGCForest: Structured Agent Memory Organization for Enterprise Group Chats",
+      "abstract": "Enterprise group chats record project progress, decisions, task ownership, and other organizational information valuable to enterprise agents. Reliable retrieval is challenging because evidence spans interleaved threads, channels, and time, with meaning and authority conditioned on the speaker. Neither RAG's independent chunk retrieval nor memory systems' summary-based consolidation can reliably recover such distributed evidence. We present EGCForest, a novel multi-view hierarchical memory framework for enterprise group chats. EGCForest organizes an immutable message log into three complementary forests: a Channel forest for temporal workflows, an Actor forest for speaker-conditioned context, and an Artifact forest for deliverable lifecycles. Cross-view connections are enabled by a Placement Map and sparse structural bridges. Built on this memory backbone, EGCForest retrieves and assembles evidence by jointly leveraging message-level relevance, hierarchical context from forest summaries, and cross-view links, recovering distributed evidence. Experiments on three enterprise-chat benchmarks show that EGCForest consistently outperforms RAG and memory-system baselines, improving answer accuracy by up to 20.85 points over MemOS while supporting efficient online retrieval.",
+      "authors": [
+        "Lingxi Cui",
+        "Jinhao Ruan",
+        "Wenqing Wei",
+        "Guo Yi",
+        "Li Rao",
+        "Ke Chen",
+        "Lidan Shou"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-14",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.19836",
+      "pdf_url": "https://arxiv.org/pdf/2610.19836.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.19474",
+      "title": "Beyond Retrieval: Evidence Access and Event Aggregation in Agent Memory",
+      "abstract": "Questions about an agent's history often require aggregating events, which retrieval alone does not resolve. We combine source-preserving evidence access with executable aggregation. Trajectory Memory (TM) retains the original trajectory and constructs a source-addressable reading view at question time. TallyMem augments it with a reusable event ledger, model-generated event specifications and deterministic execution. With a commit-specific adaptation on 776 questions from 99 held-out MINTEval repositories, TallyMem raises Qwen3-32B exact match from 35.2% to 49.0%, a 13.8-point gain over TM; gains span 12.8-13.9 points across three readers. A controlled probe with event sets parsed independently from raw logs shows an 11.0-point gain, from 82.8% to 93.8%, without routing. On full AMA-Bench, the routed system yields a smaller 1.3-point gain, from 69.8% to 71.1%. These results support executable aggregation on tasks that require combining events, with benefits dependent on the task and event specification, the largest residual system-error category in our diagnostic analysis.",
+      "authors": [
+        "Zerui Yang",
+        "Quan Xue",
+        "Chaorui Zhang",
+        "Xueyan Niu",
+        "Xuanyu Zheng",
+        "Xiyuan Wang",
+        "Haolin Ruan",
+        "Guangcheng Song",
+        "Weixi Zhang",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-14",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.19474",
+      "pdf_url": "https://arxiv.org/pdf/2610.19474.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.21165",
+      "title": "From Long Context to Selective Memory:A Survey of Memory-Centric Compression for Large Language Models",
+      "abstract": "Long-context capability has become essential for large language models (LLMs) to handle complex tasks, yet continuously expanding the context window does not remove the computational, storage, and information-selection pressures incurred at inference time. Existing work on prompt compression, KV-cache management, efficient serving, retrieval augmentation, and agent memory is usually discussed in isolation, leaving the flow of information between storage and computation insufficiently understood. This survey reframes long-context compression as a memory-management problem for allocating inference-time resources. We distinguish compute-active memory, which directly participates in model computation, from compute-inactive memory, which lies outside the computation path but can be stored, retrieved, updated, or forgotten, and we characterize offloaded KV caches, persistent prefix caches, and precomputed KV states as intermediate states on the activation path. On this basis, we formulate writing, offloading, recall, retrieval-and-injection, materialization, eviction, consolidation, and forgetting as state transitions within an information lifecycle, and introduce a budgeted cost model that places these operations in a single cost account. The resulting framework unifies short-term context compression, long-term memory management, and the transitions between them, and shows that the central challenge is not merely reducing information volume but deciding which information should participate in costly inference, when, and in what form. We further summarize evaluation dimensions, benchmark gaps, and open challenges, and argue that future research should move from static, pointwise compression toward dynamic, governable, lifecycle-aware memory management.",
+      "authors": [
+        "Chaogui Gou"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.21165",
+      "pdf_url": "https://arxiv.org/pdf/2610.21165.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.21091",
+      "title": "MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning",
+      "abstract": "Agent memory enables large language model (LLM) agents to reuse past experiences without updating their parameters. However, semantic similarity alone does not guarantee memory usefulness: downstream performance depends on how memories are selected and presented to the agent. We propose MemComposer, a memory composer that jointly examines the current query and retrieved candidates to decide which experiences to include, how many to select, and how to order them. We train the composer using Experience Policy Optimization (ExPO), a GRPO-based framework that evaluates assembled memory contexts through complete agent interactions and uses task-success feedback to optimize the assembly policy. Across three $τ^2$-bench domains with two frozen executors, MemComposer outperforms the strongest baseline for each executor while reducing average memory-token usage by 16.9% and 4.9%, respectively. The learned policy also transfers to unseen domains, executors, and memory banks, and benefits from memories generated by stronger models without further training. These results demonstrate the value of learning query-specific memory assembly using downstream task feedback.",
+      "authors": [
+        "Yixuan Xie",
+        "Xueqiang Xu",
+        "Xinyi Fan",
+        "Xinxi Lyu",
+        "Tao Feng",
+        "Xing Fan",
+        "Chenlei Guo",
+        "Jie Hao",
+        "Shaowen Wang",
+        "Jiashuo Sun",
+        "Jiawei Han"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.21091",
+      "pdf_url": "https://arxiv.org/pdf/2610.21091.pdf",
+      "ccf_match": null
+    }
+  ]
+}

@@ -1,24 +1,83 @@
 {
-  "generated_at": "2026-10-15T23:20:02.065809Z",
-  "date": "2026-10-15",
-  "total": 8,
+  "generated_at": "2026-10-16T23:03:36.532218Z",
+  "date": "2026-10-16",
+  "total": 10,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
     "arXiv": [
+      "arxiv:2610.22209",
+      "arxiv:2610.21170",
       "arxiv:2610.19472",
       "arxiv:2610.19366",
+      "arxiv:2610.22297",
       "arxiv:2610.20419",
       "arxiv:2610.19836",
       "arxiv:2610.19474",
-      "arxiv:2610.18684",
-      "arxiv:2610.18052",
-      "arxiv:2610.17763"
+      "arxiv:2610.21165",
+      "arxiv:2610.21091"
     ],
     "unmatched": []
   },
   "papers": [
+    {
+      "id": "arxiv:2610.22209",
+      "title": "Beyond Downstream QA: Rethinking How We Evaluate Agent Memory",
+      "abstract": "Agent memory benchmarks evaluate whether an agent's responses reflect correct knowledge, measuring downstream question-answering accuracy as a proxy for memory quality. We show this evaluation paradigm is incomplete: it conflates memory correctness with retrieval and generation quality, producing both false positives where correct responses mask broken memory and false negatives where incorrect responses blame correct memory for retrieval failures. We introduce FEB-30, a benchmark of 30 fact-evolution trajectories spanning 6 diagnostic categories and 3 difficulty levels, constructed via paradigm inversion: documents are generated from known fact trajectories, yielding deterministic ground truth without human annotation. Each trajectory defines how a fact should evolve across multi-author artifacts (documents, emails, conversations), enabling direct inspection of the memory store after each ingestion step. Applying FEB-30 to a representative memory system, we demonstrate that intrinsic and extrinsic evaluation diverge by an average of 16 percentage points, with 44% of trajectories exceeding meaningful divergence thresholds. Diagnostic decomposition reveals that the system correctly classifies memory operations (create, update, reinforce, supersede) only 20% of the time, a failure entirely invisible to extrinsic evaluation, and that failure modes differ systematically by category and difficulty. We release the benchmark, document generation pipeline, and scoring framework to support reproducible evaluation of agent memory systems.",
+      "authors": [
+        "Sebastian-Antonio Toma",
+        "Jean de Kernier",
+        "Mike Ply",
+        "Oliviu Matei"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.22209",
+      "pdf_url": "https://arxiv.org/pdf/2610.22209.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.21170",
+      "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
+      "abstract": "Agent memory architectures define how LLM agents store and reuse experience across tasks, but they are typically fixed after deployment, limiting their adaptability across task types. Recent self-evolving approaches instead adapt these memory architectures using execution feedback, typically represented as evaluation scores or compressed summaries. However, such coarse-grained feedback is insufficient for precise failure localization in current agent systems, where long-horizon task execution involves multiple interacting components. Without a precise failure location, existing approaches lack a clear code-level target for modification, leaving the update scope weakly constrained and often leading to large-scale rewrites of an otherwise capable memory architecture. We propose MemScope, a framework for evidence-grounded, localized evolution of an existing memory architecture. Its tool-using Patch Agent jointly inspects raw execution traces, runtime memory state, and current architecture code to identify repair targets and apply bounded, in-place edits under provider-identity and memory-compatibility constraints. On GAIA, the trace-and-memory inspection variant achieves 86.67% accuracy, compared with 70.00% for trace-only and 63.33% for summary-only feedback. Under xBench tasks, the evolved memory architecture improves over its original version from 49 to 55 correct answers with DeepSeek V3.2 and from 50 to 53 with Kimi K2.7 Code. On disjoint ALFWorld unseen tasks, success rises from 50.75% to 71.64%. Across archived architecture-snapshot transitions, the median code-change ratio is 4.4%. These results support fine-grained execution evidence as a basis for localized, in-place memory-architecture evolution.",
+      "authors": [
+        "Miao Su",
+        "Yucan Guo",
+        "Zixuan Li",
+        "Long Bai",
+        "Zhongni Hou",
+        "Xiaolong Jin",
+        "Jiafeng Guo"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.21170",
+      "pdf_url": "https://arxiv.org/pdf/2610.21170.pdf",
+      "ccf_match": null
+    },
     {
       "id": "arxiv:2610.19472",
       "title": "MemCode: Discrete Semantic Representations for Long-Term Agent Memory",
@@ -151,6 +210,32 @@
       "ccf_match": null
     },
     {
+      "id": "arxiv:2610.22297",
+      "title": "Private Retrieval Augmented Generation via Random Projection",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances the capabilities of large language models (LLMs) by querying external structured knowledge. However, it can also introduce privacy risks by leaking sensitive information from the retrieval datastore. We propose a simple method to preserve datastore privacy in RAG systems via random projection. By applying the same projection to both datastore embeddings and query embeddings, our method provably preserves semantic similarity between queries and retrieved items while substantially mitigating data extraction attacks. Across multiple RAG architectures and datasets, we show that this lightweight approach achieves superior retrieval and generation performance compared to prior methods which leverage formal differential privacy (DP) guarantees, while exhibiting comparable empirical privacy under strong attack models. Our results for the first time suggest that random projection can serve as a competitive and practical baseline for privacy-preserving RAG systems.",
+      "authors": [
+        "Dixi Yao",
+        "Tahseen Rabbani",
+        "Tian Li"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.22297",
+      "pdf_url": "https://arxiv.org/pdf/2610.22297.pdf",
+      "ccf_match": null
+    },
+    {
       "id": "arxiv:2610.20419",
       "title": "Analyzing performance of Retrieval Augmented Generation models for Question Answering Tasks",
       "abstract": "Retrieval-Augmented Generation (RAG) models have become almost a cornerstone of open-domain question answering tasks; in which the quality of answers generated in the process, greatly relies on the effectiveness of retrieval mechanisms. In the realm of LLM, the last two years have seen tremendous progress in RAG architectures, with many models reporting to have improved performance through various design innovations. The cultural question and answering systems of South Asia, in particular, present a specific challenge since the region is home to the vast number of languages and traditions, which are closely interrelated. Along with these deeply intertwined historical narratives increase the need for culturally grounded and context-aware interpretation. Despite major architectural advances in LLMs, claiming significant improvements, challenges remain when answering these region specific questions in native languages. In this study, we aim to extract high-performing factors to guide the development of optimized hybrid RAG systems. We further explore whether the integration of RAG changes performance differently for culturally grounded and non-cultural questions in a South Asian multilingual setup, and whether RAG produces a higher overall percentage of correct answers than contexted answering. We also examine how LLM performance changes when RAG methods are integrated into the question-answering pipeline in comparison with non-contexted and contexted answering and, evaluate whether the introduction of RAG benefits popular or non-popular culturally grounded questions more. Not only does our work evaluate the current methods but also carves a path for future designs of more accurate and efficient question-answering pipelines.",
@@ -245,90 +330,60 @@
       "ccf_match": null
     },
     {
-      "id": "arxiv:2610.18684",
-      "title": "Knowing the User Is Not Knowing What We Established: Grounding Awareness in Personal Agents",
-      "abstract": "Personal-agent memory has largely focused on learning what users know, prefer, and want. However, knowing the user does not necessarily mean knowing what the user and the agent have established together. An assistant's proposal should not become an authorized instruction merely because it is remembered. We introduce Grounding Awareness, the ability to distinguish accepted, unacknowledged, revised, and scoped arrangements when selecting actions. We develop a controlled benchmark to test whether agents can tell the difference between proposals users have accepted and those they have not, and whether they apply accepted arrangements only where appropriate. Across multiple agents and memory systems, we find that strong memory performance does not ensure Grounding Awareness. More surprisingly, providing more complete user information can increase execution of unacknowledged proposals, while persistent memory can cause agents to treat these proposals as if they were user instructions. We trace these failures through memory writing, retrieval, and action selection. Finally, we introduce Grounding Layer, a lightweight, training-free extension that explicitly tracks grounding status and checks consequential actions, substantially improving agent behavior without modifying models or memory systems.",
+      "id": "arxiv:2610.21165",
+      "title": "From Long Context to Selective Memory:A Survey of Memory-Centric Compression for Large Language Models",
+      "abstract": "Long-context capability has become essential for large language models (LLMs) to handle complex tasks, yet continuously expanding the context window does not remove the computational, storage, and information-selection pressures incurred at inference time. Existing work on prompt compression, KV-cache management, efficient serving, retrieval augmentation, and agent memory is usually discussed in isolation, leaving the flow of information between storage and computation insufficiently understood. This survey reframes long-context compression as a memory-management problem for allocating inference-time resources. We distinguish compute-active memory, which directly participates in model computation, from compute-inactive memory, which lies outside the computation path but can be stored, retrieved, updated, or forgotten, and we characterize offloaded KV caches, persistent prefix caches, and precomputed KV states as intermediate states on the activation path. On this basis, we formulate writing, offloading, recall, retrieval-and-injection, materialization, eviction, consolidation, and forgetting as state transitions within an information lifecycle, and introduce a budgeted cost model that places these operations in a single cost account. The resulting framework unifies short-term context compression, long-term memory management, and the transitions between them, and shows that the central challenge is not merely reducing information volume but deciding which information should participate in costly inference, when, and in what form. We further summarize evaluation dimensions, benchmark gaps, and open challenges, and argue that future research should move from static, pointwise compression toward dynamic, governable, lifecycle-aware memory management.",
       "authors": [
-        "Jiajun Chen",
-        "Xinyue Chen",
-        "Yicheng Jiang",
-        "Hua Shen"
+        "Chaogui Gou"
       ],
       "source": "arxiv",
-      "publish_date": "2026-10-13",
+      "publish_date": "2026-10-15",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.21165",
+      "pdf_url": "https://arxiv.org/pdf/2610.21165.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.21091",
+      "title": "MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning",
+      "abstract": "Agent memory enables large language model (LLM) agents to reuse past experiences without updating their parameters. However, semantic similarity alone does not guarantee memory usefulness: downstream performance depends on how memories are selected and presented to the agent. We propose MemComposer, a memory composer that jointly examines the current query and retrieved candidates to decide which experiences to include, how many to select, and how to order them. We train the composer using Experience Policy Optimization (ExPO), a GRPO-based framework that evaluates assembled memory contexts through complete agent interactions and uses task-success feedback to optimize the assembly policy. Across three $τ^2$-bench domains with two frozen executors, MemComposer outperforms the strongest baseline for each executor while reducing average memory-token usage by 16.9% and 4.9%, respectively. The learned policy also transfers to unseen domains, executors, and memory banks, and benefits from memories generated by stronger models without further training. These results demonstrate the value of learning query-specific memory assembly using downstream task feedback.",
+      "authors": [
+        "Yixuan Xie",
+        "Xueqiang Xu",
+        "Xinyi Fan",
+        "Xinxi Lyu",
+        "Tao Feng",
+        "Xing Fan",
+        "Chenlei Guo",
+        "Jie Hao",
+        "Shaowen Wang",
+        "Jiashuo Sun",
+        "Jiawei Han"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-15",
       "venue": null,
       "ccf_level": null,
       "arxiv_category": "cs.AI",
       "categories": [
         "cs.AI",
-        "cs.HC",
-        "cs.LG"
+        "cs.CL"
       ],
       "matched_keywords": [
         "agent memory"
       ],
       "score": 3,
-      "url": "https://arxiv.org/abs/2610.18684",
-      "pdf_url": "https://arxiv.org/pdf/2610.18684.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2610.18052",
-      "title": "Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents",
-      "abstract": "Long-term memory has become a core component of large language model (LLM) agents. As agents accumulate personal information over long-term use, users increasingly ask them to delete sensitive or outdated facts. A memory system should honor such requests. It should remove exactly what was requested and keep the rest of its memory intact. However, existing memory benchmarks evaluate only memory writing, retrieval, and organization, so whether agents can forget at the user's explicit request remains under-evaluated. To address this gap, we propose Bemula, the first benchmark dedicated to memory unlearning. It comprises 50 multi-session dialogue instances, 135 forget requests of six types, and 1,742 test questions. Each dialogue has a control version without the requests, so that only systems that have stored the target can earn credit for forgetting. Across the paired versions, five test suites measure storage, removal of the requested information, preservation of unrelated memories, relearning of similar facts, and resistance to extraction attacks. On Bemula, we evaluate six mainstream memory systems under three backbone LLMs, together with the Full Context LLM on two of them. The results are negative. Across all evaluated systems and backbones, no system passes more than 1.5% of forget requests end to end, and most pass none at all. These systems either leave the requested information extractable under simple attacks or delete far more than requested. Memory unlearning therefore remains an open challenge for agent memory design. We release our data and code at https://github.com/Nboxff/bemula-benchmark.",
-      "authors": [
-        "Bofan Xie",
-        "Chaokun Wang",
-        "Guanchen Ge",
-        "Songyao Wang",
-        "Fang Niu",
-        "Hang Zhang",
-        "Wei Wang"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-10-13",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 3,
-      "url": "https://arxiv.org/abs/2610.18052",
-      "pdf_url": "https://arxiv.org/pdf/2610.18052.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2610.17763",
-      "title": "Memory Echo in Single-Agent Long-Term Memory: Lifecycle Evaluation and Provenance-Guided Mitigation",
-      "abstract": "Long-term memory supports agents across sessions. Repeated retrieval and write-back can let one historical claim occupy multiple retrieval positions and influence current answers without independent evidence. Existing work examines retrieval, updating, and question answering, leaving same-source record accumulation and post-correction persistence underexplored. Motivated by research in social cognition and memory psychology on repeated exposure, retrieval, and revision, we define \\emph{Memory Echo} as the excess retrieval exposure gained by historical information from the same source without additional independent evidence, and introduce MEchoBench to evaluate its emergence, correction resistance, persistence, and effect on answers. To address this phenomenon, we introduce the Family--Provenance--Authority framework (FPA). Specifically, FPA selects one representative per source family, conditions the eligibility of old records for the answer context on verified corrections, and constrains final answers with authoritative evidence. In paired replay on 190 fixed questions across four memory frameworks, FPA raises accuracy from 0.825 to 0.920 with DeepSeek V4 Flash and from 0.782 to 0.916 with Kimi K2.6; mean Decision Contamination Effect falls from 0.106 to 0.030 and from 0.109 to 0.038, respectively. These results show that agent memory can preserve traceable history without allowing repeated historical information to govern current decisions. The code is available at https://github.com/OrcasSam/memory-echo-benchmark.",
-      "authors": [
-        "Yufeng Li",
-        "Sheng Yao",
-        "Peng Zeng",
-        "Dezhang Kong",
-        "Shi Lin",
-        "Changting Lin",
-        "Xun Wang",
-        "Meng Han"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-10-13",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 3,
-      "url": "https://arxiv.org/abs/2610.17763",
-      "pdf_url": "https://arxiv.org/pdf/2610.17763.pdf",
+      "url": "https://arxiv.org/abs/2610.21091",
+      "pdf_url": "https://arxiv.org/pdf/2610.21091.pdf",
       "ccf_match": null
     }
   ]
