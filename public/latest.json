@@ -1,13 +1,170 @@
 {
-  "generated_at": "2026-10-19T23:57:47.194309Z",
-  "date": "2026-10-19",
-  "total": 0,
+  "generated_at": "2026-10-20T23:29:27.163821Z",
+  "date": "2026-10-20",
+  "total": 5,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2610.25707",
+      "arxiv:2610.25373",
+      "arxiv:2610.25127",
+      "arxiv:2610.26433",
+      "arxiv:2610.25970"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2610.25707",
+      "title": "Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse",
+      "abstract": "Shared long-term memory lets an LLM agent serving one user inadvertently retrieve another user's credentials, but it is unclear when such exposure leads to actual harm. We introduce a three-stage audit that separates three events: a foreign credential reaches the prompt (exposure), the agent acts with it (behavior), and the other user's account changes (state). In AppWorld, a store that mixes 763 past logins from all users retrieves another user's credential for 84.7 percent of required apps, yet agents rarely act on it. Misuse appears in a stress test where memory lacks the user's own credential and presents a single foreign one as the user's record: seven agents then use it in 80 to 94 percent of runs and change the victim's account in up to 43 percent, sometimes passing the official check. Naming the owner before or inside each credential line prevents most of this: with all else fixed, misuse falls from 92 to 1 of 305 paired runs, also with name-free usernames, though owner-bound notes cost 3 to 5 successful tasks per model on clean memory. A wrongly written owner largely restores misuse; trailing owner tags and added safety instructions help only some models. Agent memory should consistently record whose credential it stores, and evaluations should measure behavior, not only exposure.",
+      "authors": [
+        "Hau-Sing So",
+        "Daixian Liu",
+        "Carl Hou",
+        "Yuhaohang He",
+        "Mengzhu Wang",
+        "Hai-Tao Zheng"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.25707",
+      "pdf_url": "https://arxiv.org/pdf/2610.25707.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.25373",
+      "title": "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data",
+      "abstract": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing intermediate state but does not retrieve it for the question that needs it. Memory systems also rarely propagate implicit changes, which no new record states. These results suggest three principles for memory design. Gather inputs along the derivation, store rules with their versions, and maintain derived states through recorded dependencies.",
+      "authors": [
+        "Sen Gao",
+        "Yongan Li",
+        "Han Chen",
+        "Bingsheng He",
+        "Ming Wu",
+        "Jason Zeng",
+        "Michael Heinrich",
+        "Shixuan Sun"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-18",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.DB",
+      "categories": [
+        "cs.DB",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.25373",
+      "pdf_url": "https://arxiv.org/pdf/2610.25373.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.25127",
+      "title": "MemBubble: Benchmarking How Agent Memory Shapes LLM Response Diversity",
+      "abstract": "Memory serves as the core component of LLM-based agents, enabling personalized responses via extracting and using user preferences from past interactions. However, its use may reduce response diversity, thereby narrowing the range of information available to users. Existing evaluations rely largely on synthetic interactions and cover few memory systems, leaving the effects of memory on response diversity insufficiently evaluated in real-world scenarios. We introduce MemBubble, a benchmark of 1000 instances built on preferences extracted from real user-assistant conversations. To measure the extent to which memory concentrates response distributions, we construct test queries in scenarios distinct from user preferences while preserving topical relevance through shared preference categories. Across multiple LLMs and memory mechanisms, entropy decreases by 34.7% on average compared with directly providing the full interaction history, highlighting the important role of memory processing in diversity loss. We also explore simple user-side interventions and changes in information availability but find that these do not effectively close the diversity gap. Our findings highlight the need to consider preserving diversity and user access to information alongside improvements in personalization when designing and using agent memory systems.",
+      "authors": [
+        "Jiajun Tan",
+        "Fei Sun",
+        "Xinyu Ma",
+        "Shixuan Zhang",
+        "Du Su",
+        "Qi Cao",
+        "Daiting Shi",
+        "Huawei Shen",
+        "Xueqi Cheng"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-18",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.25127",
+      "pdf_url": "https://arxiv.org/pdf/2610.25127.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.26433",
+      "title": "The Geometry of Agent Memory: Forecasting Retrieval-Bound Memory Failures, and Characterizing Its Limits",
+      "abstract": "We study whether geometric relationships between conversation turns, memory texts, and queries can predict answer correctness before generation. We evaluate four memory implementations with dense or hybrid retrieval and one observation-summary comparator. We embed these texts in a shared space. A logistic classifier uses 25 features describing query proximity, memory-conversation correspondence, and conversation structure. On LongMemEval-small, pooled AUROC is 0.640 over 2,367 question-system pairs, below a question-difficulty baseline of 0.655. Performance varies by question type: geometry reaches 0.841 on single-session-assistant questions, but system identity alone reaches 0.826. After controlling for difficulty and identity, geometry adds no statistically established pooled improvement (delta = +0.002, 95% CI [-0.010, 0.014]). A fixed-store context-selection experiment finds higher accuracy with proximity-ranked memories than with random subsets, consistent with ordinary retrieval relevance. On LoCoMo, nearest-turn similarity has modest predictive value for single-hop questions and near-chance estimates for several other categories. Training uses correctness labels; prediction uses pre-answer features and no additional LLM generation call. The results characterize associations between memory representations and correctness, rather than establish a reliable deployment diagnostic. In particular, embedding proximity does not verify fact coverage or distinguish memory-construction, retrieval, and generation errors.",
+      "authors": [
+        "Iliya Zhechev",
+        "Radoslav Ralev",
+        "Chris Coleman",
+        "Srijith Rajamohan",
+        "Jen Agarwal",
+        "Tyler Hutcherson",
+        "Simba Khadder"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.26433",
+      "pdf_url": "https://arxiv.org/pdf/2610.26433.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.25970",
+      "title": "GLOBE: Geometry-Led Online Behavioral Early Exit via Unit-Sphere Trajectories",
+      "abstract": "Chain-of-thought (CoT) reasoning can improve problem solving, but models often keep generating after the correct answer is already reachable; the extra steps raise serving costs and may replace a correct intermediate result with an incorrect one. We propose GLOBE (Geometry-Led Online Behavioral Early Exit), an online, training-free algorithm that terminates the model's CoT process early. GLOBE embeds each completed reasoning segment as a point on a unit sphere and reads the shape of the resulting semantic trajectory. GLOBE first applies a trial phase that generates short trial answers in a separate branch, stopping the main stream on an accepted trial after checking confidence against a threshold. If generation continues, a trajectory phase stops the stream once this path repeatedly reverses direction with little net progress. On five benchmarks including mathematical reasoning, tool calling, and agent memory, GLOBE cuts output tokens by 49.7% and active end-to-end wall time (E2E) by 51.0% across two models, and achieves a five-task average of 80.58%, comparable to Full CoT.",
+      "authors": [
+        "Xinyue Peng",
+        "Zhenlin Liang",
+        "Meng Cai",
+        "Hua Wang"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.25970",
+      "pdf_url": "https://arxiv.org/pdf/2610.25970.pdf",
+      "ccf_match": null
+    }
+  ]
 }
