@@ -1,16 +1,15 @@
 {
-  "generated_at": "2026-10-20T23:29:27.163821Z",
-  "date": "2026-10-20",
-  "total": 5,
+  "generated_at": "2026-10-21T23:44:03.418259Z",
+  "date": "2026-10-21",
+  "total": 4,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
     "arXiv": [
       "arxiv:2610.25707",
-      "arxiv:2610.25373",
-      "arxiv:2610.25127",
       "arxiv:2610.26433",
+      "arxiv:2610.27377",
       "arxiv:2610.25970"
     ],
     "unmatched": []
@@ -46,70 +45,6 @@
       "ccf_match": null
     },
     {
-      "id": "arxiv:2610.25373",
-      "title": "MemDerive: A Diagnostic Benchmark for Agent Memory over Evolving Data",
-      "abstract": "Long-running agents rely on memory of their past interactions for task state, such as what has been completed and which conditions still hold. Such state is usually a derived state. No record states it, and it must be computed by rules from multiple records of an evolving history. Existing memory benchmarks score only the final answer, with no reference for the intermediate states behind it. A wrong answer therefore cannot be traced to the state that was missed, and a state that silently became outdated goes undetected. We present MemDerive, a diagnostic benchmark for agent memory over evolving data. It specifies each scenario symbolically, derives exact gold answers with Datalog, records the gold derivation DAG and the supporting events of every query, and renders the history in natural language with fictional entities and distractors. Its 10 scenarios contain 4,692 events and 1,503 queries whose difficulty varies along access, evolution, and composition. On this ground truth, MemDerive evaluates answer reliability, diagnoses failures by probing the nodes of the gold derivation DAG, and tracks whether answers stay correct as events arrive. Our evaluation of four memory systems reveals failures that final-answer benchmarks hide. On derived state, every memory system falls behind simple BM25 retrieval, although the same answer model reaches 96.01% when given the supporting events. Most failures are ungathered, as a system holds the missing intermediate state but does not retrieve it for the question that needs it. Memory systems also rarely propagate implicit changes, which no new record states. These results suggest three principles for memory design. Gather inputs along the derivation, store rules with their versions, and maintain derived states through recorded dependencies.",
-      "authors": [
-        "Sen Gao",
-        "Yongan Li",
-        "Han Chen",
-        "Bingsheng He",
-        "Ming Wu",
-        "Jason Zeng",
-        "Michael Heinrich",
-        "Shixuan Sun"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-10-18",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.DB",
-      "categories": [
-        "cs.DB",
-        "cs.AI",
-        "cs.CL",
-        "cs.IR"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 6,
-      "url": "https://arxiv.org/abs/2610.25373",
-      "pdf_url": "https://arxiv.org/pdf/2610.25373.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2610.25127",
-      "title": "MemBubble: Benchmarking How Agent Memory Shapes LLM Response Diversity",
-      "abstract": "Memory serves as the core component of LLM-based agents, enabling personalized responses via extracting and using user preferences from past interactions. However, its use may reduce response diversity, thereby narrowing the range of information available to users. Existing evaluations rely largely on synthetic interactions and cover few memory systems, leaving the effects of memory on response diversity insufficiently evaluated in real-world scenarios. We introduce MemBubble, a benchmark of 1000 instances built on preferences extracted from real user-assistant conversations. To measure the extent to which memory concentrates response distributions, we construct test queries in scenarios distinct from user preferences while preserving topical relevance through shared preference categories. Across multiple LLMs and memory mechanisms, entropy decreases by 34.7% on average compared with directly providing the full interaction history, highlighting the important role of memory processing in diversity loss. We also explore simple user-side interventions and changes in information availability but find that these do not effectively close the diversity gap. Our findings highlight the need to consider preserving diversity and user access to information alongside improvements in personalization when designing and using agent memory systems.",
-      "authors": [
-        "Jiajun Tan",
-        "Fei Sun",
-        "Xinyu Ma",
-        "Shixuan Zhang",
-        "Du Su",
-        "Qi Cao",
-        "Daiting Shi",
-        "Huawei Shen",
-        "Xueqi Cheng"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-10-18",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.CL",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 6,
-      "url": "https://arxiv.org/abs/2610.25127",
-      "pdf_url": "https://arxiv.org/pdf/2610.25127.pdf",
-      "ccf_match": null
-    },
-    {
       "id": "arxiv:2610.26433",
       "title": "The Geometry of Agent Memory: Forecasting Retrieval-Bound Memory Failures, and Characterizing Its Limits",
       "abstract": "We study whether geometric relationships between conversation turns, memory texts, and queries can predict answer correctness before generation. We evaluate four memory implementations with dense or hybrid retrieval and one observation-summary comparator. We embed these texts in a shared space. A logistic classifier uses 25 features describing query proximity, memory-conversation correspondence, and conversation structure. On LongMemEval-small, pooled AUROC is 0.640 over 2,367 question-system pairs, below a question-difficulty baseline of 0.655. Performance varies by question type: geometry reaches 0.841 on single-session-assistant questions, but system identity alone reaches 0.826. After controlling for difficulty and identity, geometry adds no statistically established pooled improvement (delta = +0.002, 95% CI [-0.010, 0.014]). A fixed-store context-selection experiment finds higher accuracy with proximity-ranked memories than with random subsets, consistent with ordinary retrieval relevance. On LoCoMo, nearest-turn similarity has modest predictive value for single-hop questions and near-chance estimates for several other categories. Training uses correctness labels; prediction uses pre-answer features and no additional LLM generation call. The results characterize associations between memory representations and correctness, rather than establish a reliable deployment diagnostic. In particular, embedding proximity does not verify fact coverage or distinguish memory-construction, retrieval, and generation errors.",
@@ -137,6 +72,37 @@
       "score": 4,
       "url": "https://arxiv.org/abs/2610.26433",
       "pdf_url": "https://arxiv.org/pdf/2610.26433.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.27377",
+      "title": "REM: What to Store, When to Recall, What to Forget in Experience Memory for Coding Agents",
+      "abstract": "Large language model (LLM) agents now autonomously complete long-horizon tasks, such as repository-level coding, through hundreds of think-act steps, yet the experience each run produces is rarely reused on the next. Prior memory systems concentrate on retrieval, finding the most relevant past trajectory. Retrieval cannot observe the running agent, so it cannot decide whether the agent needs an experience, at which point, or for how long. We introduce REM (Reusable Experience Memory), a framework that manages the memory lifecycle from inside the agent's think-act loop through three explicit decisions. What to store: each completed trajectory is consolidated into a phase-structured document, two orders of magnitude smaller than the trajectory. When to recall: the document is injected at the start of the task; the costlier implementation record is withheld until an in-loop gate detects the agent struggling. What to forget: the record is evicted after a single exposure. On repository-level bug fixing (SWE-ContextBench Lite), REM retrieves the related trajectory more accurately than every state-of-the-art memory system (68.7% vs. 55.6% match@1) and improves, in every replicate, end-task resolution (27.6% vs. 24.9%) at 17% lower cost. Injecting the same experience as a summary or raw trajectory, even when oracle-retrieved, does not. Ablating any of the three decisions reduces resolution. Altogether, these results demonstrate that the bottleneck in experience reuse is not retrieval fidelity but how experience is stored and governed across its lifecycle, opening a control-theoretic perspective on agent memory.",
+      "authors": [
+        "Xinyi Lisa Chen",
+        "Pedro Herrero-Vidal",
+        "Xiaohan Chen",
+        "Xiaojing Yu",
+        "Cris Liu",
+        "Bingqing Song",
+        "Bin Xu",
+        "Suleiman A. Khan",
+        "You-Lin Chen"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.27377",
+      "pdf_url": "https://arxiv.org/pdf/2610.27377.pdf",
       "ccf_match": null
     },
     {

@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-10-21T23:44:03.418259Z",
+  "date": "2026-10-21",
+  "total": 4,
+  "groups": {
+    "CCF-A": [],
+    "CCF-B": [],
+    "CCF-C": [],
+    "arXiv": [
+      "arxiv:2610.25707",
+      "arxiv:2610.26433",
+      "arxiv:2610.27377",
+      "arxiv:2610.25970"
+    ],
+    "unmatched": []
+  },
+  "papers": [
+    {
+      "id": "arxiv:2610.25707",
+      "title": "Whose Credential Is It? How Owner Attribution in Agent MemoryShapes Cross-User Account Misuse",
+      "abstract": "Shared long-term memory lets an LLM agent serving one user inadvertently retrieve another user's credentials, but it is unclear when such exposure leads to actual harm. We introduce a three-stage audit that separates three events: a foreign credential reaches the prompt (exposure), the agent acts with it (behavior), and the other user's account changes (state). In AppWorld, a store that mixes 763 past logins from all users retrieves another user's credential for 84.7 percent of required apps, yet agents rarely act on it. Misuse appears in a stress test where memory lacks the user's own credential and presents a single foreign one as the user's record: seven agents then use it in 80 to 94 percent of runs and change the victim's account in up to 43 percent, sometimes passing the official check. Naming the owner before or inside each credential line prevents most of this: with all else fixed, misuse falls from 92 to 1 of 305 paired runs, also with name-free usernames, though owner-bound notes cost 3 to 5 successful tasks per model on clean memory. A wrongly written owner largely restores misuse; trailing owner tags and added safety instructions help only some models. Agent memory should consistently record whose credential it stores, and evaluations should measure behavior, not only exposure.",
+      "authors": [
+        "Hau-Sing So",
+        "Daixian Liu",
+        "Carl Hou",
+        "Yuhaohang He",
+        "Mengzhu Wang",
+        "Hai-Tao Zheng"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.25707",
+      "pdf_url": "https://arxiv.org/pdf/2610.25707.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.26433",
+      "title": "The Geometry of Agent Memory: Forecasting Retrieval-Bound Memory Failures, and Characterizing Its Limits",
+      "abstract": "We study whether geometric relationships between conversation turns, memory texts, and queries can predict answer correctness before generation. We evaluate four memory implementations with dense or hybrid retrieval and one observation-summary comparator. We embed these texts in a shared space. A logistic classifier uses 25 features describing query proximity, memory-conversation correspondence, and conversation structure. On LongMemEval-small, pooled AUROC is 0.640 over 2,367 question-system pairs, below a question-difficulty baseline of 0.655. Performance varies by question type: geometry reaches 0.841 on single-session-assistant questions, but system identity alone reaches 0.826. After controlling for difficulty and identity, geometry adds no statistically established pooled improvement (delta = +0.002, 95% CI [-0.010, 0.014]). A fixed-store context-selection experiment finds higher accuracy with proximity-ranked memories than with random subsets, consistent with ordinary retrieval relevance. On LoCoMo, nearest-turn similarity has modest predictive value for single-hop questions and near-chance estimates for several other categories. Training uses correctness labels; prediction uses pre-answer features and no additional LLM generation call. The results characterize associations between memory representations and correctness, rather than establish a reliable deployment diagnostic. In particular, embedding proximity does not verify fact coverage or distinguish memory-construction, retrieval, and generation errors.",
+      "authors": [
+        "Iliya Zhechev",
+        "Radoslav Ralev",
+        "Chris Coleman",
+        "Srijith Rajamohan",
+        "Jen Agarwal",
+        "Tyler Hutcherson",
+        "Simba Khadder"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.26433",
+      "pdf_url": "https://arxiv.org/pdf/2610.26433.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.27377",
+      "title": "REM: What to Store, When to Recall, What to Forget in Experience Memory for Coding Agents",
+      "abstract": "Large language model (LLM) agents now autonomously complete long-horizon tasks, such as repository-level coding, through hundreds of think-act steps, yet the experience each run produces is rarely reused on the next. Prior memory systems concentrate on retrieval, finding the most relevant past trajectory. Retrieval cannot observe the running agent, so it cannot decide whether the agent needs an experience, at which point, or for how long. We introduce REM (Reusable Experience Memory), a framework that manages the memory lifecycle from inside the agent's think-act loop through three explicit decisions. What to store: each completed trajectory is consolidated into a phase-structured document, two orders of magnitude smaller than the trajectory. When to recall: the document is injected at the start of the task; the costlier implementation record is withheld until an in-loop gate detects the agent struggling. What to forget: the record is evicted after a single exposure. On repository-level bug fixing (SWE-ContextBench Lite), REM retrieves the related trajectory more accurately than every state-of-the-art memory system (68.7% vs. 55.6% match@1) and improves, in every replicate, end-task resolution (27.6% vs. 24.9%) at 17% lower cost. Injecting the same experience as a summary or raw trajectory, even when oracle-retrieved, does not. Ablating any of the three decisions reduces resolution. Altogether, these results demonstrate that the bottleneck in experience reuse is not retrieval fidelity but how experience is stored and governed across its lifecycle, opening a control-theoretic perspective on agent memory.",
+      "authors": [
+        "Xinyi Lisa Chen",
+        "Pedro Herrero-Vidal",
+        "Xiaohan Chen",
+        "Xiaojing Yu",
+        "Cris Liu",
+        "Bingqing Song",
+        "Bin Xu",
+        "Suleiman A. Khan",
+        "You-Lin Chen"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.27377",
+      "pdf_url": "https://arxiv.org/pdf/2610.27377.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.25970",
+      "title": "GLOBE: Geometry-Led Online Behavioral Early Exit via Unit-Sphere Trajectories",
+      "abstract": "Chain-of-thought (CoT) reasoning can improve problem solving, but models often keep generating after the correct answer is already reachable; the extra steps raise serving costs and may replace a correct intermediate result with an incorrect one. We propose GLOBE (Geometry-Led Online Behavioral Early Exit), an online, training-free algorithm that terminates the model's CoT process early. GLOBE embeds each completed reasoning segment as a point on a unit sphere and reads the shape of the resulting semantic trajectory. GLOBE first applies a trial phase that generates short trial answers in a separate branch, stopping the main stream on an accepted trial after checking confidence against a threshold. If generation continues, a trajectory phase stops the stream once this path repeatedly reverses direction with little net progress. On five benchmarks including mathematical reasoning, tool calling, and agent memory, GLOBE cuts output tokens by 49.7% and active end-to-end wall time (E2E) by 51.0% across two models, and achieves a five-task average of 80.58%, comparable to Full CoT.",
+      "authors": [
+        "Xinyue Peng",
+        "Zhenlin Liang",
+        "Meng Cai",
+        "Hua Wang"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-19",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.25970",
+      "pdf_url": "https://arxiv.org/pdf/2610.25970.pdf",
+      "ccf_match": null
+    }
+  ]
+}
