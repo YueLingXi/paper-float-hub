@@ -1,14 +1,17 @@
 {
-  "generated_at": "2026-10-22T23:40:31.642304Z",
-  "date": "2026-10-22",
-  "total": 4,
+  "generated_at": "2026-10-23T23:34:31.868843Z",
+  "date": "2026-10-23",
+  "total": 6,
   "groups": {
-    "CCF-A": [],
+    "CCF-A": [
+      "arxiv:2610.30296"
+    ],
     "CCF-B": [],
     "CCF-C": [],
     "arXiv": [
       "arxiv:2610.29823",
       "arxiv:2610.29722",
+      "arxiv:2610.30485",
       "arxiv:2610.29671",
       "arxiv:2610.29357"
     ],
@@ -64,6 +67,62 @@
       "url": "https://arxiv.org/abs/2610.29722",
       "pdf_url": "https://arxiv.org/pdf/2610.29722.pdf",
       "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.30485",
+      "title": "Why Bother Me Again? Benchmarking Personal Agent Memory for Interaction Preferences",
+      "abstract": "Personal intelligence systems are taking on increasingly complex everyday tasks, yet repeated questions, unnecessary confirmations, and unwanted outreach can turn capable assistance into interaction burden. Reducing this burden requires agents to remember how users want to be assisted. However, existing memory benchmarks focus on factual recall and personalized answers and rarely test how agents learn and act on interaction preferences. We introduce MemPABench, an interactive environment for on-policy evaluation of memory in personal agents. MemPABench poses long-horizon tasks requiring agents to decide when to clarify, confirm, or act autonomously. Four grounded simulated users hold 14 preferences across work and personal contexts. Their feedback spans 99 sessions over four months, with five event-driven changes per user testing memory updates. We evaluate preference selection, delivered behavior, and sensitivity to context and preference change. Evaluating four memory systems across four LLM backbones, we find that current memory brings limited gains in preference selection. Retrieval-based systems (i.e. Mem0, MemOS, simple RAG) do not outperform No Memory, while File-based memory improves accuracy but applies preferences beyond relevant contexts. Our analysis shows that current memory struggles to retrieve interaction preferences and adapt to preference changes. Even with the correct preference available, overriding the agent's default interaction habits remains challenging. The environment and dataset are available at https://mempabench.com.",
+      "authors": [
+        "Jialin Li",
+        "Zhenhao Chen",
+        "Hanjun Luo",
+        "Hanan Salam"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.30485",
+      "pdf_url": "https://arxiv.org/pdf/2610.30485.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.30296",
+      "title": "Measuring Research Progress and Linguistic Inclusion in Low-Resource Languages",
+      "abstract": "Large Language Models (LLMs) have accelerated research on low-resource and multilingual NLP, but their effectiveness in creating an equitable landscape remains unmapped. We analyze 1,158 peer-reviewed open-access papers published between 2020 and 2025, examining research attention to low-resource languages (LRLs) and representation across language and speaker populations. To assess linguistic inclusion beyond publication counts, we introduce the Linguistic Inclusion Framework (LIF), a multidimensional framework that measures linguistic inclusion in four dimensions: research growth, representation expansion, representation continuity, and distributional equity. While annual publications grew from 52 to 415, a 5.4X increase in their ACL Anthology publication share, this growth largely concentrated on represented languages rather than expanding coverage of underrepresented languages. Further analysis shows that languages spoken in Asia account for 64.1% of speakers across LRLs we analyze but receive only 46.7% of the language representation share (0.7X their proportional share), while European languages receive 5.3X their proportional share. At the country level, linguistically diverse regions such as sub-Saharan Africa and Southeast Asia show the lowest language coverage ratios. Applying the framework at the continental level, we find that no region scores well on all four dimensions, showing that research growth alone is not a reliable metric of progress toward equitable and inclusive language technology\\footnote{We will release all collected and annotated data for research purposes}.",
+      "authors": [
+        "Atnafu Lambebo Tonja",
+        "Tadesse Destaw Belay",
+        "Jesujoba Oluwadara Alabi",
+        "Israel Abebe Azime",
+        "Benjamin Rosman",
+        "Ehsan Shareghi",
+        "Thamar Solorio",
+        "Pontus Stenetorp",
+        "Monojit Choudhury"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.30296",
+      "pdf_url": "https://arxiv.org/pdf/2610.30296.pdf",
+      "ccf_match": "ACL"
     },
     {
       "id": "arxiv:2610.29671",

@@ -1,0 +1,212 @@
+{
+  "generated_at": "2026-10-23T23:34:31.868843Z",
+  "date": "2026-10-23",
+  "total": 6,
+  "groups": {
+    "CCF-A": [
+      "arxiv:2610.30296"
+    ],
+    "CCF-B": [],
+    "CCF-C": [],
+    "arXiv": [
+      "arxiv:2610.29823",
+      "arxiv:2610.29722",
+      "arxiv:2610.30485",
+      "arxiv:2610.29671",
+      "arxiv:2610.29357"
+    ],
+    "unmatched": []
+  },
+  "papers": [
+    {
+      "id": "arxiv:2610.29823",
+      "title": "MemoryTax: The Bitter Lesson of Agent Memory",
+      "abstract": "Agent memory systems such as Mem0 and Zep decide what to keep before any question arrives; coding agents keep the raw history and let the model search it with its own tools. We ask whether designed memory still helps once the model is strong enough to search for itself. On one LoCoMo conversation (419 turns, 152 questions), we run four memory methods (full context, BM25, Mem0, Zep) and three coding agents (Pi, Codex, Claude Code), each with GPT-4o-mini, GPT-6 Luna and Claude Opus 5.5, and record what every rollout costs. This is a short empirical study, with one conversation and one run per cell. Agent memory is a costly patch for a weak model: Mem0 beats full context only with GPT-4o-mini, and its build alone costs more than a whole full-context rollout. Agent memory also has a ceiling, set by the model that writes it: a stronger reader does not recover what a weaker writer left out. With Claude Opus 5.5, Pi tops the cost-accuracy frontier, scoring 99% for less than half the cost of full context; its one miss is a wrong answer key. Part of that lead comes from photo captions that only the agents could read: on the 88 questions whose evidence has no photo, Pi and full context differ by one answer.",
+      "authors": [
+        "Zedong Peng"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.29823",
+      "pdf_url": "https://arxiv.org/pdf/2610.29823.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.29722",
+      "title": "Retrieval Augmented Generation Compositionality",
+      "abstract": "Retrieval Augmented Generation (RAG) grounds large language models in external knowledge. Modern pipelines combine embedding, chunking, retrieval, reranking, query augmentation, context compression, and agentic verification, yet these techniques are typically evaluated one at a time. It remains unclear whether their isolated gains survive composition, whether retrieval quality and answer faithfulness favor the same design choices, and whether conclusions from small corpora hold at large scale. We pre-declare three hypotheses and introduce LASAGNA, an open-source framework for controlled RAG evaluation. We test 450 configurations across eight benchmarks and corpora ranging from 5K to 200K documents. Three findings emerge. First, individually strong techniques from different phases of a RAG pipeline do not necessarily compose: three retrieval techniques predict a +47% combined improvement but deliver only +17% when used together. Second, component gains stack differently for retrieval and faithfulness, and optimizing one can hurt the other. Third, the best composition changes as the corpus grows: the combination that wins on a small corpus may not remain best at large scale. These findings show that gains measured in isolation are not reliable predictors of realistic performance, and that new RAG techniques should be tested with the full surrounding stack. We call on researchers to do so and supply LASAGNA to simplify these experiments.",
+      "authors": [
+        "Ido Levy",
+        "Segev Shlomov",
+        "Leshem Choshen"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.29722",
+      "pdf_url": "https://arxiv.org/pdf/2610.29722.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.30485",
+      "title": "Why Bother Me Again? Benchmarking Personal Agent Memory for Interaction Preferences",
+      "abstract": "Personal intelligence systems are taking on increasingly complex everyday tasks, yet repeated questions, unnecessary confirmations, and unwanted outreach can turn capable assistance into interaction burden. Reducing this burden requires agents to remember how users want to be assisted. However, existing memory benchmarks focus on factual recall and personalized answers and rarely test how agents learn and act on interaction preferences. We introduce MemPABench, an interactive environment for on-policy evaluation of memory in personal agents. MemPABench poses long-horizon tasks requiring agents to decide when to clarify, confirm, or act autonomously. Four grounded simulated users hold 14 preferences across work and personal contexts. Their feedback spans 99 sessions over four months, with five event-driven changes per user testing memory updates. We evaluate preference selection, delivered behavior, and sensitivity to context and preference change. Evaluating four memory systems across four LLM backbones, we find that current memory brings limited gains in preference selection. Retrieval-based systems (i.e. Mem0, MemOS, simple RAG) do not outperform No Memory, while File-based memory improves accuracy but applies preferences beyond relevant contexts. Our analysis shows that current memory struggles to retrieve interaction preferences and adapt to preference changes. Even with the correct preference available, overriding the agent's default interaction habits remains challenging. The environment and dataset are available at https://mempabench.com.",
+      "authors": [
+        "Jialin Li",
+        "Zhenhao Chen",
+        "Hanjun Luo",
+        "Hanan Salam"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.30485",
+      "pdf_url": "https://arxiv.org/pdf/2610.30485.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.30296",
+      "title": "Measuring Research Progress and Linguistic Inclusion in Low-Resource Languages",
+      "abstract": "Large Language Models (LLMs) have accelerated research on low-resource and multilingual NLP, but their effectiveness in creating an equitable landscape remains unmapped. We analyze 1,158 peer-reviewed open-access papers published between 2020 and 2025, examining research attention to low-resource languages (LRLs) and representation across language and speaker populations. To assess linguistic inclusion beyond publication counts, we introduce the Linguistic Inclusion Framework (LIF), a multidimensional framework that measures linguistic inclusion in four dimensions: research growth, representation expansion, representation continuity, and distributional equity. While annual publications grew from 52 to 415, a 5.4X increase in their ACL Anthology publication share, this growth largely concentrated on represented languages rather than expanding coverage of underrepresented languages. Further analysis shows that languages spoken in Asia account for 64.1% of speakers across LRLs we analyze but receive only 46.7% of the language representation share (0.7X their proportional share), while European languages receive 5.3X their proportional share. At the country level, linguistically diverse regions such as sub-Saharan Africa and Southeast Asia show the lowest language coverage ratios. Applying the framework at the continental level, we find that no region scores well on all four dimensions, showing that research growth alone is not a reliable metric of progress toward equitable and inclusive language technology\\footnote{We will release all collected and annotated data for research purposes}.",
+      "authors": [
+        "Atnafu Lambebo Tonja",
+        "Tadesse Destaw Belay",
+        "Jesujoba Oluwadara Alabi",
+        "Israel Abebe Azime",
+        "Benjamin Rosman",
+        "Ehsan Shareghi",
+        "Thamar Solorio",
+        "Pontus Stenetorp",
+        "Monojit Choudhury"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.30296",
+      "pdf_url": "https://arxiv.org/pdf/2610.30296.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2610.29671",
+      "title": "Uni-Mem: Learning a Long-Horizon Agentic Memory Manager with Unified Online Policy Optimization",
+      "abstract": "Long-term agent memory is shifting from predefined workflows toward learnable policies for memory construction and retrieval. Existing learning-based methods either optimize construction alone or combine retrieval-side online reinforcement learning (RL) with offline construction supervision, limiting co-adaptation between the two stages. In this paper, we explore end-to-end online RL for a unified memory manager (Uni-Mem) that learns both capabilities under a shared policy. However, joint optimization with existing RL algorithms such as GRPO faces confounded group comparisons and sparse feedback over long memory-management trajectories. To this end, we propose Stage-Decoupled GRPO, which alternates construction and retrieval optimization while controlling variation from the other stage within each rollout group, yielding stage-specific learning signals. We further introduce Event-Wise Credit Assignment (ECA), which localizes feedback to responsible events and propagates event-level advantages to their constituent operations. Experiments on LoCoMo and LongMemEval show that Uni-Mem outperforms the strongest RL-based memory, demonstrating the effectiveness of jointly learning memory construction and retrieval via Stage-Decoupled GRPO and ECA.",
+      "authors": [
+        "Zhiqian Xia",
+        "Jielong Tang",
+        "Ling-An Zeng",
+        "Shixiong Kai",
+        "Rong Yao",
+        "Hao Kong",
+        "Xiao Dong",
+        "Wei Wang",
+        "Mingxuan Yuan",
+        "Siyu Xia",
+        "Haifeng Xia"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.29671",
+      "pdf_url": "https://arxiv.org/pdf/2610.29671.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.29357",
+      "title": "Memory-Centric Continual Learning for AI Agents",
+      "abstract": "Autonomous agents powered by foundation models can reason, plan, and use tools, but their fixed weights and context limits hinder sustained learning from experience over long-term deployment. While external memory systems attempt to bridge this gap, they mostly act as passive retrieval caches, evaluated primarily by whether they can recall stored facts or past interactions. Whether memory can drive genuine continual learning remains an open question. In this paper, we introduce Memory-Centric Continual Learning (MCCL), arguing that memory should be judged by whether it improves future actions, not merely what it retrieves. MCCL has three main parts. First, a three-axis taxonomy organizes memory by where state is stored (substrates), what form it takes (assets), and how it is managed (policies). This defines a two-loop lifecycle that updates memory state in an inner loop while refining management policies in an outer loop based on task feedback. Second, an evaluation protocol measures retention under interference, adaptation to change, and task transfer to isolate genuine behavioral gains from simple context expansion. Third, a memory scaling framework models how agent performance scales with experience, storage capacity, and compute budgets across non-parametric and parametric memory. Together, these components reframe agent memory from passive lookup to continuous learning, offering a principled route toward self-improving autonomous agents.",
+      "authors": [
+        "Dongfang Li",
+        "Zhuoen Chen",
+        "Bonian Jia",
+        "Zixuan Liu",
+        "Zhengxuan Lu",
+        "Can Deng",
+        "Yukun Shi",
+        "Yuhang Meng",
+        "Xin Zhang",
+        "Jiahe Huang",
+        "Fuhao Li",
+        "Junmai Wang",
+        "Shunyao Wen",
+        "Jingjun Sun",
+        "Jiaxu Tian",
+        "Jiangling Zhang",
+        "Zihan Wang",
+        "Liangyou Li",
+        "Yitong Yao",
+        "Shuangyong Song",
+        "Beilun Wang",
+        "Pengxu Wei",
+        "Hanlin Xu",
+        "Chang Liu",
+        "Yongxiang Li",
+        "Baotian Hu",
+        "Xiangyang Ji",
+        "Min Zhang"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-21",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2610.29357",
+      "pdf_url": "https://arxiv.org/pdf/2610.29357.pdf",
+      "ccf_match": null
+    }
+  ]
+}
