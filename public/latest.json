@@ -1,13 +1,74 @@
 {
-  "generated_at": "2026-10-30T00:27:35.055737Z",
-  "date": "2026-10-30",
-  "total": 0,
+  "generated_at": "2026-10-31T00:10:20.221379Z",
+  "date": "2026-10-31",
+  "total": 2,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2610.39276",
+      "arxiv:2610.39790"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2610.39276",
+      "title": "MemSteer: Turning User Histories into Supervision for Agent Memory Optimization",
+      "abstract": "An effective agent memory system should adapt to a user's history and task requirements. Human-annotated supervision can guide this adaptation by providing feedback for evaluating and improving memory designs. Yet suitable labels are rarely available for new user histories, and manually constructing QA pairs and supporting evidence is costly. We introduce MemSteer, which turns unlabeled user histories into question-answer (QA) supervision with supporting evidence for memory-design optimization. MemSteer constructs an evidence-grounded answer plan that specifies how facts across related records jointly support a reference answer. The plan guides question generation, while source-grounded auditing and blind answer recovery check the resulting annotations. To study the utility of this supervision, we develop MemSteer-Opt, which combines QA-based design evaluation with evidence-guided failure diagnosis to revise memory store, retrieval, and context construction without updating model parameters. Experiments on ATM-Bench and RHELM show that this supervision is competitive with official-QA-guided optimization. Relative to Base-BM25, MemSteer-Opt improves ATM-Bench Question Score by 13.4 points and RHELM accuracy by 4.1 and 6.6 points without and with external data, respectively. The supervision also benefits two existing optimizers on ATM-Bench, while new-user experiments demonstrate continued design optimization using supervision generated from the target histories.",
+      "authors": [
+        "Jie Huang",
+        "Cuiling Lan",
+        "Qize Yu",
+        "Xiulian Peng",
+        "Yan Lu"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-29",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2610.39276",
+      "pdf_url": "https://arxiv.org/pdf/2610.39276.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2610.39790",
+      "title": "Long-Term Agent Memory through Complementary Curation and Consolidation",
+      "abstract": "Long-horizon dialogue agents require effective memory systems to recall facts, events, and relationships from interaction histories. In this work, we propose a hybrid-memory architecture comprising episodic memories and structured relational memories and a consolidation mechanism which preserves efficiency. We conduct an empirical study across two benchmarks: LoCoMo and LongMemEval-S. Our experiments demonstrate that the two memory types are consistently complementary, combining both outperform state-of-the-art memory frameworks and achieves 90.2% accuracy on LoCoMo and 85.5% on LongMemEval-S.",
+      "authors": [
+        "Abhishek Gupta",
+        "Dongge Han",
+        "Daniel Madrigal Diaz",
+        "Wei-Ning Chen",
+        "Mayukh Das",
+        "Victor Rühle",
+        "Saravan Rajmohan"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-10-29",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2610.39790",
+      "pdf_url": "https://arxiv.org/pdf/2610.39790.pdf",
+      "ccf_match": null
+    }
+  ]
 }
