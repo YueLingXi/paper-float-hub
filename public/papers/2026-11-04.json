@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-11-04T00:56:34.506575Z",
+  "date": "2026-11-04",
+  "total": 3,
+  "groups": {
+    "CCF-A": [],
+    "CCF-B": [],
+    "CCF-C": [],
+    "arXiv": [
+      "arxiv:2611.02361",
+      "arxiv:2611.02912",
+      "arxiv:2611.02511"
+    ],
+    "unmatched": []
+  },
+  "papers": [
+    {
+      "id": "arxiv:2611.02361",
+      "title": "Agent Memory as Rate-Limited Filtering: Explicit State Outlasts Long Context Beyond a Reader-Dependent Horizon",
+      "abstract": "Can a language model that reads the full history of an access log say whether a service may act now? On an executable benchmark of grants, withdrawals, reinstatements, expiries, groups and change windows under a known policy, scored on pairs of histories that differ only in the order or one field of the deciding events, open models of 7 to 32 billion parameters fall from 72 to 86 percent after eight or sixteen events to 48 to 55 percent after 256, while reasoning-trained 32B models reading the current state reach 96 and 98 percent. A reasoning model of 120 billion parameters trails the state by four and seven points at 256 and 512 events and by about ten at 1,024, so the length beyond which explicit state outlasts long context grows with the reader. We treat agent memory as recursive filtering. The decision depends on the history only through a state whose size is set by the number of tracked keys. A store holding fewer component records than the state forgets on a time scale set by its capacity, and a reader model predicts its accuracy within 0.02 on average in a registered test. Retaining log lines without regard to time order errs with probability approaching one half, a bound that is attained. A filter in which a model parses each line and an explicit rule applies the updates answers 80 to 89 percent at 256 events and beats relevance retrieval, model-kept ledgers, a reimplementation of StateMem and the Mem0 library. A retriever that selects at query time the lines the queried state depends on matches it at 256 events on the first domain, so what decides is selection by the state's dependencies, which the filter performs when writing, without the query. Applying parsed updates themselves, the models fall to 58 and 59 percent. A frozen replication on a second domain with fresh wording reproduces the horizon.",
+      "authors": [
+        "Tianhao Guo",
+        "Chongyao Guo"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-02",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.LG",
+      "categories": [
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2611.02361",
+      "pdf_url": "https://arxiv.org/pdf/2611.02361.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2611.02912",
+      "title": "A State Change Is Local, Its Consequences Are Not: Dependency-Aware State Revision for Long-Term Agent Memory",
+      "abstract": "Long-lived agents rely on persistent memory of users, tasks and decisions, and this memory must stay consistent with a world that keeps changing. When an upstream fact changes, however, memory systems can revise the contradicted memory itself while the beliefs, plans and actions derived from it remain accepted, even though they have lost their support. We therefore formulate dependency-aware state revision, which asks not only what changed but also which dependent states should no longer be trusted. To address it, StateGraph maintains an evolving state dependency graph whose edges are recovered from interaction histories. Its core design is counterfactual verification: each candidate edge is tested by asking whether the dependent state would survive the loss of its premise, which separates support dependence from semantic relatedness, and revision then invalidates a dependent state only when a strict dependency fails and no independent support path survives. To test this design, we introduce StateChangeBench, a controlled benchmark of 50 author-constructed cases annotated with cascade depth, hard negatives and action consequences. On it, StateGraph's Impact-F1 margin over a CUPMem reimplementation is 6.9 percentage points at depth 1 and 26.0 at depth 3+. On public long-term memory benchmarks, its point estimates are comparable to or higher than those of the evaluated baselines on most datasets. These results provide initial evidence that explicit dependency tracking can improve selective memory revision under changing conditions.",
+      "authors": [
+        "Yiqi Wang",
+        "Tongyuan Zhao",
+        "Jiaqi Zhang",
+        "Yiqun Duan",
+        "Zhangkai Wu",
+        "Mingkai Zheng",
+        "Taotao Cai"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-02",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.02912",
+      "pdf_url": "https://arxiv.org/pdf/2611.02912.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2611.02511",
+      "title": "When Prediction Shapes the Future: A BlueSky Agenda for Reflexive Time Series Analysis",
+      "abstract": "Time-series models are increasingly deployed in operational systems (e.g., inventory management and clinical care) where predictions trigger interventions that alter future observations, producing records we term AI-shaped trajectories. This sequence-prediction coupling deepens as such systems evolve into agents that autonomously predict, act, and remember across long horizons. Such AI-shaped trajectories support immediate performance monitoring, but turn ambiguous once reused as passive data. An algorithm may then misread a prediction-prevented stockout as naturally stable demand, or an averted medical crisis as a false alarm. This ambiguity then propagates into everything built on the record, from retraining and agent memory to downstream predictive tasks. As a result, systems may internalize these intervention effects as natural phenomena, drifting further from the truth at every closed-loop cycle. In this Blue Sky paper, we advocate an agenda for reflexive time-series analysis that shifts the analytical object from the intervention-agnostic sequence to the prediction-action-observation loop. The agenda requires closed-loop provenance to track the operational context (e.g., predictions, policies, and actions), sequence identification to estimate how those actions affect future values under explicit causal assumptions, and closed-loop evaluation to separate intrinsic process prediction from policy-driven effects. This foundation is essential for integrating autonomous agents into such loops at scale, enabling the joint learning of intervention effects and intrinsic dynamics for robust temporal representations.",
+      "authors": [
+        "Tao Xie",
+        "Yiqun Zhang",
+        "Yiu-ming Cheung"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-02",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2611.02511",
+      "pdf_url": "https://arxiv.org/pdf/2611.02511.pdf",
+      "ccf_match": null
+    }
+  ]
+}
