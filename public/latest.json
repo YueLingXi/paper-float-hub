@@ -1,76 +1,13 @@
 {
-  "generated_at": "2026-11-11T00:55:51.733961Z",
-  "date": "2026-11-11",
-  "total": 2,
+  "generated_at": "2026-11-13T01:31:19.407825Z",
+  "date": "2026-11-13",
+  "total": 0,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [
-      "arxiv:2611.12068",
-      "arxiv:2611.11840"
-    ],
+    "arXiv": [],
     "unmatched": []
   },
-  "papers": [
-    {
-      "id": "arxiv:2611.12068",
-      "title": "MIRIX-2.0: Multi-Agent Memory System",
-      "abstract": "Long-term memory lets LLM agents personalize, stay consistent, and reuse what worked before. Parametric memories need training, consolidation can lose details for good, and keeping every record leaves a growing store to search. We present MIRIX-2.0, a multi-agent memory system designed to be practical, accurate, and efficient at once. It is the most accurate of the compared systems on four of five QA benchmarks. It reaches 91.4% on LoCoMo and 72.6% on LongMemEval-S, where it leads the strongest baseline by 14.3 points, and with AutoDream disabled it gains 31.0 and 22.0 points over HyperMem on single-hop and multi-hop document QA. As procedural memory, it yields the highest mean success among the compared memory methods on ALFWorld and WebShop and reaches 49.2% on MetaClaw-Bench, against 44.0% for MetaClaw's skill library. Six typed memory agents keep complete records as the system of record, and a provenance hypergraph indexes episodic and semantic records with n-ary frames that cite their rows. Retrieval runs under explicit budgets, so the evidence a question inspects does not grow with the history. AutoDream merges duplicate anchors outside the write path without rewriting any record, and it distills task sessions into skills. With AutoDream disabled, MIRIX-2.0 answers faster than HyperMem on all five timed benchmarks. It needs no fine-tuning, runs with closed and open models, and its code is public.",
-      "authors": [
-        "Wei-Chieh Huang",
-        "Weizhi Zhang",
-        "Jiayan Nan",
-        "Peng Xia",
-        "Yu Wang"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-09",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.CL",
-      "categories": [
-        "cs.CL"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 6,
-      "url": "https://arxiv.org/abs/2611.12068",
-      "pdf_url": "https://arxiv.org/pdf/2611.12068.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2611.11840",
-      "title": "Correct Answers from Insufficient Histories: A Controlled Study of Agent Memory Evaluation",
-      "abstract": "An answer can match the reference for a complete agent history even when the reader's visible history does not determine it. We study this distinction using executable device logs. Our protocol separates reference agreement, certified evidence sufficiency, and context-appropriate behavior. Insufficiency requires two legal histories yielding byte-identical visible contexts but different answers; public chronology and query cutoffs certify sufficient prefixes. On 80 confirmation histories, Qwen3-32B matches 87 hidden references among 203 insufficient raw-prefix instances, with only seven appropriate abstentions. A fixed-input DeepSeek-V4-Flash replication matches 85 and abstains on 21 of the same 203 instances. Each reader makes 1,600 requests. Compact CSV's estimated appropriateness effects remain inconclusive: +3.16 percentage points, clustered 95% interval [0.00,6.57], for Qwen and +2.46, [-1.84,6.94], for DeepSeek. A separate held-out judge study achieves 99.38% correctness but retains support errors and truncations; a deterministic baseline solves all constructed cases. These results support an evaluation diagnosis across two hosted reader configurations, not gains for a general memory system or natural-language evidence assessment.",
-      "authors": [
-        "Quan Xue",
-        "Zerui Yang",
-        "Chaorui Zhang",
-        "Haolin Ruan",
-        "Xueyan Niu",
-        "Xuanyu Zheng",
-        "Xiyuan Wang",
-        "Weixi Zhang",
-        "Wei Han",
-        "Bo Bai"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-09",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 4,
-      "url": "https://arxiv.org/abs/2611.11840",
-      "pdf_url": "https://arxiv.org/pdf/2611.11840.pdf",
-      "ccf_match": null
-    }
-  ]
+  "papers": []
 }
