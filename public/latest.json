@@ -1,13 +1,125 @@
 {
-  "generated_at": "2026-11-17T03:14:02.953549Z",
-  "date": "2026-11-17",
-  "total": 0,
+  "generated_at": "2026-11-18T02:37:35.687282Z",
+  "date": "2026-11-18",
+  "total": 4,
   "groups": {
-    "CCF-A": [],
+    "CCF-A": [
+      "arxiv:2611.21232"
+    ],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2611.22102",
+      "arxiv:2611.21478",
+      "arxiv:2611.21019"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2611.22102",
+      "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+      "abstract": "Large language model agents accumulate experience in memory, and how that memory evolves during interaction is as important as what it stores. Recent methods update memory online, yet both the operators that transform memory and the rules that select them remain fixed by design. We propose EvoDisco, which formulates agent memory evolution as evolutionary strategy discovery: the agent must discover which operator to apply, when to apply it, and how to instantiate it, rather than rewriting memory under a static operator schedule. A learnable policy conditions on the current memory state and recent task history, then selects and instantiates one of four semantic operators---Abstract, Refine, Bridge, and Reframe---which respectively compress related memories, decompose overloaded entries, connect weakly linked experiences, and reorganize retrieved reasoning chains. The policy is updated with a bi-level fitness. An inner signal scores each transformation using a retrieval-quality improvement regularized by memory complexity. An outer signal scores strategic efficacy over a window of past decisions, combining historical operator-utility regret, utility-prediction error, and selection diversity. Under a one-pass online plus frozen-transfer protocol on ALFWorld, WebShop, and LifelongAgentBench (OS and DB), EvoDisco improves over strong memory baselines including MemP and MemRL. The largest gains are on ALFWorld ($+8.8$ online / $+12.9$ frozen-transfer points over MemP; $+16.4$ / $+17.9$ over MemRL). Ablations attribute these gains to both fitness levels and the operator library.",
+      "authors": [
+        "Mingyang Liu",
+        "Qingcan Kang",
+        "Shixiong Kai",
+        "Kaichao Liang",
+        "Xiaojin Fu",
+        "Tao Zhong",
+        "Linqi Song"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-17",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 6,
+      "url": "https://arxiv.org/abs/2611.22102",
+      "pdf_url": "https://arxiv.org/pdf/2611.22102.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2611.21478",
+      "title": "Jetriever: Shifting Agent Memory Retrieval from Similarity to Utility",
+      "abstract": "A useful memory need not resemble the question it helps answer. Jetriever ranks each stored memory by Jev's decision score for its usefulness to the current question, replacing similarity search with full-pool utility scoring. On InMind's 125 indirect-query tasks, it places the gold exchange first in 84.8% of cases; matched BM25 and MiniLM controls reach 1.6% and 0.0% when indexing user turns. A 20-question comparison separates finding evidence from ranking it: Jev and Qwen3.5 9B each find 90% of gold exchanges by rank 50, while Laya finds 30%; at rank one, Jev reaches 85% and Qwen3.5 9B 40%. On a dimension-proportional random sample of 60 MemoryAgentBench questions, Jetriever's four-dimension score is 55.4%, against 44.3% for ReFind on the same questions. Jev retrieval costs USD 0.00834 per InMind question and USD 0.03103 per MAB question on average. These results show the value of world knowledge, scores that rank decisive memories first, and affordable full-pool scoring.",
+      "authors": [
+        "Ruizhe Li",
+        "Licheng Zhang",
+        "Mingxuan Du",
+        "Zhendong Mao"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-16",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.21478",
+      "pdf_url": "https://arxiv.org/pdf/2611.21478.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2611.21232",
+      "title": "A Generative AI-Driven Architecture for Whole-Home Intelligent Services: Edge Models, Memory Management, and Household Applications",
+      "abstract": "Generative artificial intelligence is entering the home. Cloud-based assistants face governance limitations in data transmission, continuous availability, and the reliability of physical actions, which are especially salient in households where devices remain online, data accumulate over time, and commands trigger real-world actions. Using the home local server as a unifying organizing axis, this article develops a design-oriented review framework. Sources from arXiv, CNKI, ACL Anthology, and official documentation were searched through November 2026 and coded into five evidence categories: reviews, system prototypes, benchmarks, HCI and eldercare studies, and official documentation. System designs were mapped onto shared architectural modules, identifying nine recurrent responsibilities of the home local server. Generative models support perceptual interpretation, intent understanding, and candidate planning, while deterministic validation, knowledge-graph constraints, and authorization leases confine candidate actions to an inspectable space. Home control, emotional companionship, and intelligent guarding can be compared within a common framework: they share state and memory but differ in latency, false positive and negative rates, proactivity, and permissions. Existing benchmarks rely on virtual environments and cannot substitute for real-deployment evaluation. Local deployment is not inherently safer, and technical continuity alone does not establish the social or medical effects of companionship and guarding. The article proposes a five-dimensional evaluation framework covering architectural capability, system resources, privacy, safety and reliability, and human experience, together with six design principles and a future research agenda for local-first intelligent home systems.",
+      "authors": [
+        "Mo Zhou"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-16",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.21232",
+      "pdf_url": "https://arxiv.org/pdf/2611.21232.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2611.21019",
+      "title": "MemDoctor: Stage-wise Error Attribution and Repair for MLLM Agent Memory",
+      "abstract": "Multimodal large language models (MLLMs) now assist users across sessions of images and text, carried by an external memory of what was said and shown. When such an assistant answers wrongly, the failure usually began earlier, in how a record was written, updated or retrieved, and the answer alone does not say where. We formalize multimodal memory as four stages, Write, Update, Retrieve and Answer, and define nine error types across them. A stage-resolved analysis on Mem-Gallery traces most failures to a source stage, and most of those lie before the answer. Injecting known errors against fact-preserving control edits, we then follow each tainted record downstream. Early errors survive to the answer as apparent evidence, and hurt most when no other record holds the fact. A diagnosis that trusts the quoted evidence therefore blames the stage where the error surfaces, not the one where it began. We propose MemDoctor, in which the MLLM that built the memory diagnoses its own failures. It traces each needed fact backward through the four stages, accepts a diagnosis only when the cited evidence is found in memory, and repairs that stage before answering again. On a 4B backbone, MemDoctor improves accuracy on both Mem-Gallery and MemLens, outperforming all evaluated 8B baselines, and the same loop also improves MuRAG and A-Mem.",
+      "authors": [
+        "Ruiyang Jiang",
+        "Xinyang Liao",
+        "Weikai Huang",
+        "Yuqi Niu",
+        "Junjie Zhou",
+        "Yubin Zheng"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-16",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.21019",
+      "pdf_url": "https://arxiv.org/pdf/2611.21019.pdf",
+      "ccf_match": null
+    }
+  ]
 }
