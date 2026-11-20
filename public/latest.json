@@ -1,108 +1,45 @@
 {
-  "generated_at": "2026-11-19T02:06:54.921526Z",
-  "date": "2026-11-19",
-  "total": 3,
+  "generated_at": "2026-11-20T01:54:46.857887Z",
+  "date": "2026-11-20",
+  "total": 1,
   "groups": {
-    "CCF-A": [
-      "arxiv:2611.22769"
-    ],
+    "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
     "arXiv": [
-      "arxiv:2611.22245",
-      "arxiv:2611.22102"
+      "arxiv:2611.24422"
     ],
     "unmatched": []
   },
   "papers": [
     {
-      "id": "arxiv:2611.22245",
-      "title": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
-      "abstract": "Multi-agent delegation lets LLM systems distribute evidence collection across workers with separate contexts. This creates a consistency challenge: facts retrieved by workers may be missing from the evidence available to the lead for a joint conclusion. We introduce a benchmark and evidence-flow profiler for studying multi-agent memory inconsistency through controlled factual conflicts in Harvey LAB document-review tasks. Pooled across three models with comparable generation spending, requiring delegation increases retrieval of both conflicting claims from 50.2% to 68.7% relative to single-agent execution, yet conflict detection falls from 16.2% to 13.2%. Within this setting, workers report both claims for only 35.2% of retrieved pairs, and pooled matched comparisons show higher detection than single-agent execution when one worker reads both claims but lower detection when the claims are split across workers. Worker-to-lead handoffs are a central target for improving conflict detection in multi-agent LLMs.",
+      "id": "arxiv:2611.24422",
+      "title": "Resolution as Attention for Efficient Agent Memory Perception",
+      "abstract": "LLM-based agents accumulate extensive interaction histories when solving complex, long-horizon tasks, making efficient memory management critical to their performance and scalability. While existing memory management methods primarily focus on what to retain or retrieve, they often overlook how much perceptual detail should be allocated to individual past interactions. We posit that effective agent memory depends not only on the information preserved, but also on the granularity at which each past interaction is perceived. Motivated by this insight, we propose Resolution as Attention (RAA), a memory perception mechanism that uses visual resolution as a means of attention allocation across interaction histories. RAA renders past interactions as images and dynamically adjusts their resolution at every step according to their relevance to the agent's upcoming decision, preserving fine-grained information for critical interactions while reducing visual-token consumption for less relevant ones. To adaptively determine the perceptual fidelity of each interaction, we train a lightweight relevance estimator with teacher-model guidance and further optimize it to preserve the agent's decision consistency at a reduced visual-token cost. Experiments across multiple tasks and backbones show that RAA reduces token consumption by over 50% without compromising task performance. Moreover, RAA can be integrated as a plug-in perception layer with existing memory management methods, yielding further token savings and revealing adaptive perception as a complementary dimension of agent memory.",
       "authors": [
-        "Hejia Zhang",
-        "Zhongming Yu",
-        "Yimin Ding",
-        "Wei-Ting Chen",
-        "Hengjia Yu",
-        "Wentao Ni",
-        "Yijun Liu",
-        "Cong Xu",
-        "Xin Chen",
-        "Matrix Yao",
-        "Fan Zhao",
-        "Jishen Zhao"
+        "Siqi Xiang",
+        "Zhipeng Xu",
+        "Shengrui Liu",
+        "Zulong Chen",
+        "Chunyan Miao",
+        "Shijian Lu"
       ],
       "source": "arxiv",
-      "publish_date": "2026-11-17",
+      "publish_date": "2026-11-18",
       "venue": null,
       "ccf_level": null,
       "arxiv_category": "cs.AI",
       "categories": [
         "cs.AI",
-        "cs.MA"
+        "cs.CV"
       ],
       "matched_keywords": [
         "agent memory"
       ],
       "score": 6,
-      "url": "https://arxiv.org/abs/2611.22245",
-      "pdf_url": "https://arxiv.org/pdf/2611.22245.pdf",
+      "url": "https://arxiv.org/abs/2611.24422",
+      "pdf_url": "https://arxiv.org/pdf/2611.24422.pdf",
       "ccf_match": null
-    },
-    {
-      "id": "arxiv:2611.22102",
-      "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
-      "abstract": "Large language model agents accumulate experience in memory, and how that memory evolves during interaction is as important as what it stores. Recent methods update memory online, yet both the operators that transform memory and the rules that select them remain fixed by design. We propose EvoDisco, which formulates agent memory evolution as evolutionary strategy discovery: the agent must discover which operator to apply, when to apply it, and how to instantiate it, rather than rewriting memory under a static operator schedule. A learnable policy conditions on the current memory state and recent task history, then selects and instantiates one of four semantic operators---Abstract, Refine, Bridge, and Reframe---which respectively compress related memories, decompose overloaded entries, connect weakly linked experiences, and reorganize retrieved reasoning chains. The policy is updated with a bi-level fitness. An inner signal scores each transformation using a retrieval-quality improvement regularized by memory complexity. An outer signal scores strategic efficacy over a window of past decisions, combining historical operator-utility regret, utility-prediction error, and selection diversity. Under a one-pass online plus frozen-transfer protocol on ALFWorld, WebShop, and LifelongAgentBench (OS and DB), EvoDisco improves over strong memory baselines including MemP and MemRL. The largest gains are on ALFWorld ($+8.8$ online / $+12.9$ frozen-transfer points over MemP; $+16.4$ / $+17.9$ over MemRL). Ablations attribute these gains to both fitness levels and the operator library.",
-      "authors": [
-        "Mingyang Liu",
-        "Qingcan Kang",
-        "Shixiong Kai",
-        "Kaichao Liang",
-        "Xiaojin Fu",
-        "Tao Zhong",
-        "Linqi Song"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-17",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 6,
-      "url": "https://arxiv.org/abs/2611.22102",
-      "pdf_url": "https://arxiv.org/pdf/2611.22102.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2611.22769",
-      "title": "ForceBody: Force-Paired Parametric Body Motion with Torque Uncertainty",
-      "abstract": "Forces and torques drive human motion, central to biomechanics, robotics, and physics-aware animation, yet they are often absent from learning-based motion pipelines for body reconstruction and generation. Some motion datasets provide force annotations, but the paired motion sequences are incompatible with the parametric body models used in modern learning pipelines. In addition, existing datasets typically obtain joint torques through inverse dynamics, which is inherently sensitive to the quality of the input kinematics; however, they do not quantify the reliability of these torque estimates. We close this gap with ForceBody, the first dataset to bring ground truth force supervision into a parametric body representation, shipped with per-sample torque uncertainty. ForceBody pairs the SKEL body model with ground reaction forces and inverse-dynamics joint torques across 10,386 motion trials (9.7M frames, 26.9 hours) from 140 subjects. Each torque label is paired with a per-frame, per-joint uncertainty annotation obtained by Monte Carlo sampling through the inverse dynamics pipeline. We benchmark six architectures (MLP, Conv1D, LSTM, GRU, Mamba2, Transformer) on ground reaction force and joint torque prediction from SKEL motion. As one example use of the released uncertainty, finetuning a Transformer with per-sample uncertainty weighting reduces the MAE of joint torque estimation by 5%. Code and data are at https://github.com/DominoAI-Lab/ForceBody-NeurIPS-ED-2026.",
-      "authors": [
-        "Joonwoo Kwon",
-        "Yufei Zhang",
-        "Xiaoming Liu",
-        "Zijun Cui"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-17",
-      "venue": null,
-      "ccf_level": "A",
-      "arxiv_category": "cs.CV",
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "matched_keywords": [],
-      "score": 4,
-      "url": "https://arxiv.org/abs/2611.22769",
-      "pdf_url": "https://arxiv.org/pdf/2611.22769.pdf",
-      "ccf_match": "NeurIPS"
     }
   ]
 }
