@@ -1,105 +1,13 @@
 {
-  "generated_at": "2026-11-21T01:49:27.510047Z",
-  "date": "2026-11-21",
-  "total": 3,
+  "generated_at": "2026-11-22T00:42:24.865881Z",
+  "date": "2026-11-22",
+  "total": 0,
   "groups": {
-    "CCF-A": [
-      "arxiv:2611.26286"
-    ],
+    "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [
-      "arxiv:2611.26427",
-      "arxiv:2611.26361"
-    ],
+    "arXiv": [],
     "unmatched": []
   },
-  "papers": [
-    {
-      "id": "arxiv:2611.26427",
-      "title": "MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management",
-      "abstract": "Long-term agents accumulate large external memory stores as interactions unfold, increasing the costs of storage, retrieval, and response generation. Efficiency is constrained by two coupled factors: a growing record count increases retrieval overhead, while longer retrieved contexts increase prefill computation and decoding-time attention costs. Existing methods prune or consolidate records, but pruning can discard useful evidence, whereas consolidation may produce fewer yet longer retrieval units. We introduce MemFolder, a structure-guided memory folding framework that sequentially reduces record count and context length. The framework comprises two core components that share memory groups, using cross-record structure to guide both evidence consolidation and compact representation. RecordFolder grounds entity mentions, progressively selects representative yet complementary anchors, and combines semantic and entity affinity with temporal chaining to consolidate compatible records into fewer retrieval units. ContextFolder encodes the original records within these groups into compact text and uses verification feedback to revise encodings when key facts cannot be recovered. Experiments on the three text-based memory benchmarks LoCoMo, PersonaMem, and LongMemEval and the two multimodal benchmarks M3-Bench-web and M3-Bench-robot demonstrate the strong performance of our methods. Notably, on Mem0, RecordFolder retains 99.0% of the original average performance across the three text-based benchmarks with 50% fewer records, exceeding the strongest baseline by 1.9 percentage points in performance retention. Combined with ContextFolder, existing record compression methods further shorten their output records while retaining most of their performance.",
-      "authors": [
-        "Xuyang Liu",
-        "Chenwen Lu",
-        "Junxi Wang",
-        "Siyu Ren",
-        "Xinying Lin",
-        "Siteng Huang",
-        "Hongli Sun",
-        "Linfeng Zhang",
-        "Honggang Chen"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-19",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.CL",
-      "categories": [
-        "cs.CL",
-        "cs.CV"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 4,
-      "url": "https://arxiv.org/abs/2611.26427",
-      "pdf_url": "https://arxiv.org/pdf/2611.26427.pdf",
-      "ccf_match": null
-    },
-    {
-      "id": "arxiv:2611.26286",
-      "title": "Twice-Told Critiques: Claim-Level Homogenization of Peer Review in the LLM Era",
-      "abstract": "Peer review relies on several readers finding different problems. We measure critique overlap in conference and journal reviews. At ICLR, measured overlap rose from 12.0% in 2026 to 21.3% in 2027, in reviews from the same stage of the review process, with year-on-year rises at NeurIPS, ICML and the F1000 and PLOS journals. A third ICLR review of a paper added 5.46 new problems to the other two in 2027, against 6.12 in 2026. We apply MELD, a detector of LLM-generated text, to all reviews. Within a paper, two reviews that MELD flags overlap more than two unflagged reviews: by 3.0 points at ICLR in 2024-2025, by 4.5 points in 2026-2027, and by 5.4 points across five journal sources. These results provide evidence that LLM-flagged reviews of one paper are less distinct from each other than unflagged reviews, and suggest that the diversity of critiques among reviews of a single paper is falling.",
-      "authors": [
-        "Ilya Gusev"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-19",
-      "venue": null,
-      "ccf_level": "A",
-      "arxiv_category": "cs.CL",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.DL"
-      ],
-      "matched_keywords": [],
-      "score": 4,
-      "url": "https://arxiv.org/abs/2611.26286",
-      "pdf_url": "https://arxiv.org/pdf/2611.26286.pdf",
-      "ccf_match": "NeurIPS"
-    },
-    {
-      "id": "arxiv:2611.26361",
-      "title": "How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents",
-      "abstract": "LLM agents on long-horizon tasks fail in recurring, procedural ways. They mis-paginate an API, resolve the wrong entity, or answer when no answer was asked. We built a pipeline that lets an agent learn from its own history. It first mines short \\emph{lessons} from the agent's own trajectories, one to three per episode. It then consolidates those lessons into a smaller set of \\emph{guidelines}, where each guideline records how many lessons it merged. At inference the agent receives either all guidelines or a selected subset. The pipeline ships in the open-source altk-evolve library and is deployed in IBM's CUGA agent and watsonx Orchestrate platform. We report what we learned building, measuring, and productizing it. Our primary instrument is the AppWorld benchmark, across models spanning 40--92\\% baseline task completion. The central finding is that the right amount of memory is a property of the model, not the memory. A strong model keeps improving as guidelines are added. DeepSeek-V3.2 gains +9.5 points of task completion and +16.1 points of scenario completion with its full 191-guideline set. A weak model gains less from the same full set than from a small selected subset. gpt-oss-120b starts at 39.9\\% task completion. It reaches 51.2\\% with all 199 of its guidelines but 55.4\\% (mean of two runs) with a selected subset of about 29. Around that result we report what went wrong: a high-support guideline that backfired, provenance silently dropped during consolidation, a swallowed API error that failed every task while producing a plausible log, and a baseline confound that nearly produced a misleading comparison with a prior method. We distill these into recommendations for teams deploying agent memory.",
-      "authors": [
-        "K. R. Jayaram",
-        "Vatche Isahagian",
-        "Aswath Vaithinathan Aravindan",
-        "Vinod Muthusamy",
-        "Punleuk Oum",
-        "Gaodan Fang",
-        "Michal Ulewicz",
-        "Gegi Thomas",
-        "Evelyn Duesterwald"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-19",
-      "venue": null,
-      "ccf_level": null,
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [
-        "agent memory"
-      ],
-      "score": 3,
-      "url": "https://arxiv.org/abs/2611.26361",
-      "pdf_url": "https://arxiv.org/pdf/2611.26361.pdf",
-      "ccf_match": null
-    }
-  ]
+  "papers": []
 }
