@@ -1,13 +1,47 @@
 {
-  "generated_at": "2026-11-23T01:09:43.471909Z",
-  "date": "2026-11-23",
-  "total": 0,
+  "generated_at": "2026-11-24T05:01:03.577529Z",
+  "date": "2026-11-24",
+  "total": 1,
   "groups": {
     "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
-    "arXiv": [],
+    "arXiv": [
+      "arxiv:2611.29255"
+    ],
     "unmatched": []
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "arxiv:2611.29255",
+      "title": "NoeVera: Can Knowledge Guide Experiments and Experiments Refine Knowledge?",
+      "abstract": "With the growing demand for large language model (LLM) services, optimizing LLM serving systems is becoming increasingly complex, and the bottleneck is no longer predicting how a given configuration will perform. The harder problem is deciding what to investigate: which mechanisms matter for a workload, which configurations are worth testing, and what evidence a decision still needs. In this work, we present NoeVera, an agentic Second Brain that goes beyond just one-shot retrieval by turning papers, code, benchmarks, and experimental results into a persistent, provenance-preserving knowledge base with three planes: source evidence, reusable synthesis, and agent memory. Decision-aware retrieval assembles compact evidence packs, role-specific agents reason over them and invoke a simulator (Vidur or GAUSS) whenever quantitative support is needed, and every finding is written back as a scoped evidence record, so knowledge guides experiments and experiments refine knowledge. In configuration search over four serving scenarios, NoeVera comes within 5% of the optimum in a median of 6-7 simulator calls, versus 9 for Bayesian optimization and 15 for a knowledge-free agent with the same tools; on A100 GPUs, its representative configurations deliver ~1.30x vLLM-default throughput and meet every scenario's latency objective. When reused, provenance-preserving evidence records over-generalize on only 8% of applicability traps, versus 28% for a general-purpose agent memory. On the held-out 48-task split of a 72-task benchmark, NoeVera scores 29% higher than an equally equipped agent and 36% higher than its single-call retrieval counterpart (0.80 vs. 0.62 and 0.59), and even when baselines receive NoeVera's own prompts, a statistically significant part of its evidence-evolution advantage remains.",
+      "authors": [
+        "Pinaki Prasad Guha Neogi",
+        "Spyros Mastorakis",
+        "Ankur Mallick",
+        "Saravan Rajmohan",
+        "Victor Rühle"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-22",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.DC",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 3,
+      "url": "https://arxiv.org/abs/2611.29255",
+      "pdf_url": "https://arxiv.org/pdf/2611.29255.pdf",
+      "ccf_match": null
+    }
+  ]
 }
