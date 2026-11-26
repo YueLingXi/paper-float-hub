@@ -1,0 +1,122 @@
+{
+  "generated_at": "2026-11-26T03:13:25.398851Z",
+  "date": "2026-11-26",
+  "total": 4,
+  "groups": {
+    "CCF-A": [
+      "arxiv:2611.34011",
+      "arxiv:2611.33464"
+    ],
+    "CCF-B": [],
+    "CCF-C": [],
+    "arXiv": [
+      "arxiv:2611.33005",
+      "arxiv:2611.32938"
+    ],
+    "unmatched": []
+  },
+  "papers": [
+    {
+      "id": "arxiv:2611.34011",
+      "title": "Honest but Wrong: Formalizing Retraction in the Ethics of Speech Acts",
+      "abstract": "A speaker who asserts honestly may later discover that its assertion was false. Such erroneous truths are not lies, yet they raise the question of whether, and on which moral grounds, the speaker must retract them. Using the FIPA-ACL performative disconfirm, we extend a belief-based framework that evaluates speech acts under deontologism and consequentialism to the case of retraction. We prove that the honesty duty of deontologism, which bears on utterances when they are made, never requires retracting an erroneous truth, and add a persistent one, which forbids letting the addressee believe what the speaker no longer believes. On a legal-advice case implemented in Answer Set Programming, we show that deontologism and consequentialism both require the retraction, but that consequentialism no longer does once it comes too late to prevent harm.",
+      "authors": [
+        "Benjamin Icard",
+        "Gauvain Bourgne",
+        "Jeanne Bonnaventure",
+        "Jean-Gabriel Ganascia"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-25",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.34011",
+      "pdf_url": "https://arxiv.org/pdf/2611.34011.pdf",
+      "ccf_match": "ACL"
+    },
+    {
+      "id": "arxiv:2611.33464",
+      "title": "PAC Learning to Sample: On Computational Aspects of Language Generation",
+      "abstract": "The success of language models has motivated theoretical work on learning to sample from distributions on discrete domains. A prominent abstraction is the model of language generation in the limit, introduced by Kleinberg and Mullainathan (NeurIPS 2024), in which the algorithm must generate from the target language after some finite but unspecified number of positive examples. While its positive results are surprisingly general, most guarantees are qualitative. In this work, we seek quantitative guarantees on sample and time complexity, inspired by statistical and computational learning theory. To this end, we study a PAC model of language generation, proposed (in a different context) by De, Diakonikolas, and Servedio (SODA 2015), in which a Boolean concept class $C$ over $\\{-1,1\\}^n$ defines the target languages: given uniformly random positive examples of an unknown concept $f \\in C$, the learner must output a sampler whose output distribution (conditioned on the training data) is close in total variation to the uniform distribution over $f^{-1}(1)$. Their work implicitly gives an efficient algorithm for PAC learning to sample $C$, given three primitives for $C$: an online learner, approximate sampling and counting oracles, and an SQ learner. We ask whether these ingredients, in particular online learnability, are necessary. First, we construct a Boolean concept class $C$ for which online learning is cryptographically hard, yet PAC learning to sample is computationally efficient. Then, we develop new algorithms that use offline ERM oracles instead of online learners, together with approximate sampling/counting oracles for intersections of concepts in $C$ and an SQ learner for $C$. We view our results, together with the work of De, Diakonikolas, and Servedio, as a first step towards understanding the computational complexity of language generation.",
+      "authors": [
+        "Alkis Kalavasis",
+        "Shuchen Li",
+        "Manolis Zampetakis"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-24",
+      "venue": null,
+      "ccf_level": "A",
+      "arxiv_category": "stat.ML",
+      "categories": [
+        "stat.ML",
+        "cs.CL",
+        "cs.DS",
+        "cs.LG"
+      ],
+      "matched_keywords": [],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.33464",
+      "pdf_url": "https://arxiv.org/pdf/2611.33464.pdf",
+      "ccf_match": "NeurIPS"
+    },
+    {
+      "id": "arxiv:2611.33005",
+      "title": "Leto: Utility-Centric Agent Memory",
+      "abstract": "Large language model (LLM) agents rely on external memory to retain and reuse information across interactions. Existing memory systems treat memory as a record of the past and evaluate it by fidelity to the conversation. However, the value of memory lies in whether it improves the agent's response. A memory system decides what to memorize and what to serve before that response exists, and fidelity checks neither decision against it. Faithful memory can therefore fail to improve the response. We instead view memory as a prediction problem and present \\textbf{\\emph{\\leto{}}}, a memory system for LLM agents that focuses on the utility of memory to the future rather than on its fidelity to the past. Because future requests are unknown, \\emph{\\leto{}} preserves access to conversation details through memory indexing, allowing information to remain available through its sources. When a request arrives, memory replay draws on this index to anticipate and supply the context the agent needs beyond what the request explicitly states. The utility of the served context remains uncertain until the response is generated, motivating a utility loop that uses response outcomes to refine future memory selection. We evaluate our system against six memory systems on five benchmarks across three scenarios. In personalization, it outperforms the strongest compared memory system by 16.3 percentage points in accuracy on PrefEval and by 3.1 points in task completion on PERMA. For long-horizon tasks, it achieves the best overall performance on MemoryArena averaged over five environments with a gain that increases with the chain depth. In long-context understanding, it is on par with retrieval over the raw history while serving fewer context tokens.",
+      "authors": [
+        "Shuguang Chen",
+        "Salman Paracha"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-24",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "matched_keywords": [
+        "agent memory"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.33005",
+      "pdf_url": "https://arxiv.org/pdf/2611.33005.pdf",
+      "ccf_match": null
+    },
+    {
+      "id": "arxiv:2611.32938",
+      "title": "Efficient Video Retrieval Augmented Generation via Token Allocation",
+      "abstract": "Efficient long-video understanding requires identifying relevant evidence while minimizing the tokens processed by vision-language models (VLMs). Existing video retrieval-augmented generation (RAG) methods rely on frame selection and token compression, but overlook how much each additional token is worth. We introduce Lembas, a plug-and-play framework that formulates video RAG as a token allocation problem over frames and subtitles under a shared budget. Our key insight is that the value of a token diminishes within each item and decreases further as similar evidence receives more tokens. Lembas captures both effects in a single objective and solves it with an efficient iterative water-filling algorithm that has a provable convergence guarantee. For multi-turn conversations, Lembas reuses the tokens processed in earlier turns and refines relevance with the VLM's attention at no extra cost. Our evaluations show that Lembas improves accuracy by up to 7.2 percentage points over state-of-the-art baselines at comparable compute. On multi-turn video understanding, Lembas achieves up to 1.5 percentage points higher accuracy with 1.7-17.3x fewer TFLOPs.",
+      "authors": [
+        "Ayush Barik",
+        "Fan Lai",
+        "Francis Y. Yan"
+      ],
+      "source": "arxiv",
+      "publish_date": "2026-11-24",
+      "venue": null,
+      "ccf_level": null,
+      "arxiv_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG",
+        "eess.IV"
+      ],
+      "matched_keywords": [
+        "retrieval augmented generation"
+      ],
+      "score": 4,
+      "url": "https://arxiv.org/abs/2611.32938",
+      "pdf_url": "https://arxiv.org/pdf/2611.32938.pdf",
+      "ccf_match": null
+    }
+  ]
+}
