@@ -1,40 +1,13 @@
 {
-  "generated_at": "2026-11-27T03:18:30.796531Z",
-  "date": "2026-11-27",
-  "total": 1,
+  "generated_at": "2026-11-28T02:58:31.294589Z",
+  "date": "2026-11-28",
+  "total": 0,
   "groups": {
-    "CCF-A": [
-      "arxiv:2611.34011"
-    ],
+    "CCF-A": [],
     "CCF-B": [],
     "CCF-C": [],
     "arXiv": [],
     "unmatched": []
   },
-  "papers": [
-    {
-      "id": "arxiv:2611.34011",
-      "title": "Honest but Wrong: Formalizing Retraction in the Ethics of Speech Acts",
-      "abstract": "A speaker who asserts honestly may later discover that its assertion was false. Such erroneous truths are not lies, yet they raise the question of whether, and on which moral grounds, the speaker must retract them. Using the FIPA-ACL performative disconfirm, we extend a belief-based framework that evaluates speech acts under deontologism and consequentialism to the case of retraction. We prove that the honesty duty of deontologism, which bears on utterances when they are made, never requires retracting an erroneous truth, and add a persistent one, which forbids letting the addressee believe what the speaker no longer believes. On a legal-advice case implemented in Answer Set Programming, we show that deontologism and consequentialism both require the retraction, but that consequentialism no longer does once it comes too late to prevent harm.",
-      "authors": [
-        "Benjamin Icard",
-        "Gauvain Bourgne",
-        "Jeanne Bonnaventure",
-        "Jean-Gabriel Ganascia"
-      ],
-      "source": "arxiv",
-      "publish_date": "2026-11-25",
-      "venue": null,
-      "ccf_level": "A",
-      "arxiv_category": "cs.AI",
-      "categories": [
-        "cs.AI"
-      ],
-      "matched_keywords": [],
-      "score": 4,
-      "url": "https://arxiv.org/abs/2611.34011",
-      "pdf_url": "https://arxiv.org/pdf/2611.34011.pdf",
-      "ccf_match": "ACL"
-    }
-  ]
+  "papers": []
 }
